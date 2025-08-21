@@ -109,27 +109,44 @@
         }
         .image-carousel-container {
             display: flex;
+            flex-wrap: wrap; /* Adicionado para quebrar as linhas no celular */
             overflow-x: auto;
             gap: 4px;
             padding: 10px 0;
             justify-content: center;
         }
         .image-carousel-container img {
-            height: 200px; /* or a fixed height */
+            height: 200px;
             object-fit: contain;
+            flex-grow: 1; /* Permite que as imagens se expandam */
         }
+        /* Layout responsivo para tabelas de preço */
+        .price-table-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .price-table-container .price-table {
+            width: 45%; /* Ajuste para ter duas colunas em desktop */
+            margin: 10px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
-            h1 { font-size: 2em; }
-            .image-carousel-container {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            h1 { font-size: 1.5em; } /* Título principal menor */
+            h2 { font-size: 1.5em; } /* Títulos de seções menores */
             .image-carousel-container img {
                 width: 100%;
                 height: auto;
+            }
+            .price-table-container {
+                flex-direction: column; /* Empilha as tabelas de preço */
+            }
+            .price-table-container .price-table {
+                width: 90%; /* Ocupa quase toda a largura */
+                margin: 10px auto;
             }
         }
     </style>
@@ -199,44 +216,46 @@
 
     <div class="section">
         <h2><span style="background-color:red;color:white">02 Bônus Incríveis</span> <br>você ganha alguns bônus extras além do curso.</h2>
-        <div class="price-table">
-            <h3>Plano<br>Básico</br></h3>
-            <div class="price">R$ 10,00</div>
-            <div class="period">Pagamento Único</div>
-            <ul>
-                <li><b>Curso Designer Bom de Bola</b></li>
-                <li>Garantia 7 Dias</li>
-                <li>1 Ano de Acesso</li>
-                <li><span style="color:#FF0000"><s><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</s></span></li>
-                <li><span style="color:#FF0000"><s><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</s></span></li>
-                <li><span style="color:#FF0000"><s><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</s></span></li>
-                <li><span style="color:#FF0000"><s><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</s></span></li>
-                <li><span style="color:#FF0000"><s><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</s></span></li>
-                <li><span style="color:#FF0000"><s><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</s></span></li>
-                <li><span style="color:#FF0000"><s><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</s></span></li>
-                <li><span style="color:#FF0000"><s><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</s></span></li>
-            </ul>
-            <a href="https://pivadesigner.com/upgrade-dbdb" class="button">LIBERAR PLANO BÁSICO</a>
-        </div>
-        <div class="price-table">
-            <h3>Mega<br>Oferta</br></h3>
-            <div class="price">R$ 37,00</div>
-            <div class="period">Em até 12x no cartão</div>
-            <ul>
-                <li><center><img src="https://pivadesigner.com/wp-content/uploads/2023/05/MEGA-DBDB-1.png" width="400"></center></li>
-                <li><b>Curso Designer Bom de Bola</b></li>
-                <li>Acesso Vitalício</li>
-                <li><B>GARANTIA DE 30 DIAS:</B> Nesse Plano você tem 30 dias para testar o produto e se achar que não é para você é só entrar em contato via WhatsApp solicitando o estorno total do valor.</li>
-                <li><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</li>
-                <li><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</li>
-                <li><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</li>
-                <li><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</li>
-                <li><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</li>
-                <li><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</li>
-                <li><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</li>
-                <li><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</li>
-            </ul>
-            <a href="https://pay.greenn.com.br/13915/offer/Mpz687/?b_id=12888&b_id=13916&ch_id=1826" class="button">LIBERAR MEGA OFERTA</a>
+        <div class="price-table-container">
+            <div class="price-table">
+                <h3>Plano<br>Básico</br></h3>
+                <div class="price">R$ 10,00</div>
+                <div class="period">Pagamento Único</div>
+                <ul>
+                    <li><b>Curso Designer Bom de Bola</b></li>
+                    <li>Garantia 7 Dias</li>
+                    <li>1 Ano de Acesso</li>
+                    <li><span style="color:#FF0000"><s><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</s></span></li>
+                    <li><span style="color:#FF0000"><s><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</s></span></li>
+                </ul>
+                <a href="https://pivadesigner.com/upgrade-dbdb" class="button">LIBERAR PLANO BÁSICO</a>
+            </div>
+            <div class="price-table">
+                <h3>Mega<br>Oferta</br></h3>
+                <div class="price">R$ 37,00</div>
+                <div class="period">Em até 12x no cartão</div>
+                <ul>
+                    <li><center><img src="https://pivadesigner.com/wp-content/uploads/2023/05/MEGA-DBDB-1.png" width="400"></center></li>
+                    <li><b>Curso Designer Bom de Bola</b></li>
+                    <li>Acesso Vitalício</li>
+                    <li><B>GARANTIA DE 30 DIAS:</B> Nesse Plano você tem 30 dias para testar o produto e se achar que não é para você é só entrar em contato via WhatsApp solicitando o estorno total do valor.</li>
+                    <li><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</li>
+                    <li><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</li>
+                    <li><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</li>
+                    <li><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</li>
+                    <li><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</li>
+                    <li><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</li>
+                    <li><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</li>
+                    <li><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</li>
+                </ul>
+                <a href="https://pay.greenn.com.br/13915/offer/Mpz687/?b_id=12888&b_id=13916&ch_id=1826" class="button">LIBERAR MEGA OFERTA</a>
+            </div>
         </div>
     </div>
 
@@ -249,7 +268,11 @@
 
     <div class="section">
         <div>
-            <h2 class="elementor-heading-title elementor-size-default" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 500; font-size: 22px; line-height: 1.4em; font-family: Lato, sans-serif; color: #000000; opacity: 1; visibility: visible; transition: opacity 0.24s ease-in-out 0s; text-align: center;"><span style="border-style: none; font-weight: bold;"><i style="border-style: none;"><u style="border-style: none;">A proposta é simples e clara</u>:</i></span> Estou apresentando uma oportunidade de gerar renda expressiva como designer criando artes esportivas.</h2>
+            <h2 class="elementor-heading-title elementor-size-default">
+                <span style="font-weight: bold;">
+                    <i><u>A proposta é simples e clara</u>:</i>
+                </span> Estou apresentando uma oportunidade de gerar renda expressiva como designer criando artes esportivas.
+            </h2>
         </div>
     </div>
 
@@ -258,7 +281,7 @@
             <p>Estou falando de um modelo que você pode <span style="text-decoration: underline;">simplesmente replicar</span> e criar quantas artes quiser e aumentar exponencialmente suas vendas.</p><p>Estou falando de algo que servirá como o seu guia oficial para criar artes esportivas e que seja rentável no curto prazo.</p><p>Felizmente, adquirindo seu acesso hoje você garante 85% de desconto e + 3 bônus exclusivos.</p><p><b>Pagamento único, sem pegadinhas e 7 dias de garantia.</b></p>
         </div>
         <h2>Legal... mas se é tão bom, por que está tão barato?</h2>
-        <img src="https://pivadesigner.com/wp-content/uploads/2023/04/desconfiado.jpg" alt="Imagem do carrossel">
+        <img src="https://pivadesigner.com/wp-content/uploads/2023/04/desconfiado.jpg" alt="Imagem do carrossel" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
         <div>
             <p>Ahhh, eu sei que isso passou pela sua cabeça.</p><p>Se você prestar atenção, o valor de R$10,00 e R$37,00 não parece ser um valor aleatório para cobrar em um produto (e de fato não é).</p><p><b>Razão número 01:</b> O valor não se torna um obstáculo para ninguém.</p><p><b>Razão número 02:</b> Proteção contra curiosos.</p><p>Mesmo que o investimento seja baixo, o simples fato de cobrar já afasta curiosos em busca de “soluções gratuitas” na internet.</p><p>E quem gosta do produto, fica com vontade comprar outros treinamentos no futuro (essa é a “jogada”).</p><p><u>Sem pegadinhas, sem letras miúdas ou nada do tipo.</u></p>
         </div>
