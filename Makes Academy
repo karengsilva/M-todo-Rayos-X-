@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo V2 Página D6D - Alunos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        h1 { font-size: 2.5em; color: #fff; }
+        h2 { font-size: 2em; }
+        .section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section.dark {
+            background: #000;
+            color: #fff;
+        }
+        .section.dark h1, .section.dark h2, .section.dark h3 {
+            color: #fff;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #0B9C00;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #007e00;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-left: 5px solid #0E9600;
+            border-radius: 4px;
+            text-align: left;
+        }
+        .price-table {
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            background: linear-gradient(297deg, #006A0F, #000000);
+            color: #fff;
+            text-align: center;
+        }
+        .price-table .price {
+            font-size: 3em;
+            font-weight: 900;
+            color: #03BD00;
+        }
+        .price-table .period {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .price-table ul li {
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 5px;
+            border-bottom: 1px dashed #444;
+            text-align: left;
+        }
+        .image-carousel-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 4px;
+            padding: 10px 0;
+            justify-content: center;
+        }
+        .image-carousel-container img {
+            height: 200px; /* or a fixed height */
+            object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 { font-size: 2em; }
+            .image-carousel-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .image-carousel-container img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>A ESTRATÉGIA PARA FATURAR MAIS DE <span style="color:#2EF01F">R$5MIL POR MÊS </span> COM ARTES ESPORTIVAS</h1>
+        <div>Você terá acesso imediato a estratégia de Design que eu utilizo para criar e vender artes esportivas.</div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/500157822" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>DE <s>R$97,00</s></h2>
+        <h2>POR APENAS</h2>
+        <h2>R$10</h2>
+        <a href="#oferta" class="button">COMPRAR AGORA!</a>
+    </div>
+
+    <div class="section">
+        <h2>Como criar backgrounds incriveis em poucos passos?</h2>
+        <h2>Como viver e ser lucrativo no design?</h2>
+        <h2>Como criar uma iluminação realista no Photoshop?</h2>
+        <h2>Como abordar e vender essas artes esportivas para jogadores?</h2>
+        <div>
+            <p>Essas são algumas das perguntas mais frequentes que eu recebo todos os dias no meu Instagram…</p><p>E se eu te falar que é possível usar minha estrutura e processo criativo para criar rapidamente artes incríveis capazes de te gerar mais de R$5mil todo mês?</p><p>E o melhor, <u>você não precisa</u> assistir infinitas horas de conteúdo, comprar cursos caros, nem torrar o seu dinheiro com testes e mais testes ATÉ conseguir vender.</p><p>Tudo o que você precisa fazer é <u>seguir</u> <u>estruturas validadas.</u></p><p>É claro que o sucesso de um designer envolve vários fatores: Sua experiência, sua dedicação, suas referências...</p><p>Mas sem dúvida nenhuma, dominar o processo criativo <b>é um dos mais importantes.</b></p><p>Mas deixa eu te fazer algumas perguntas…</p>
+        </div>
+        <ul>
+            <li>O que você acha de aprender como criar e vender suas artes esportivas para jogadores do futebol brasileiro e mundial?</li>
+            <li> O que você acha de MODELAR os meus templates de artes esportivas?</li>
+            <li>E se você soubesse como é o meu processo criativo nos MÍNIMOS detalhes para usar as melhores técnicas que mais tem dado resultados pro meu bolso?</li>
+        </ul>
+        <div>
+            <p>Isso tornaria sua vida mais fácil e aumentaria suas chances de ter sucesso como designer?</p><p><span style="text-decoration: underline;">Pode ter certeza que sim.</span></p>
+        </div>
+        <h2>Foi por isso que eu criei o DBDB!</h2>
+        <div>
+            <p>Confira alguma das artes que você vai aprender a criar do zero no curso 👇🏽</p>
+        </div>
+        <div class="image-carousel-container">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/CR7-SIM.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/CAVANI.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/DEPAY.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2021/05/QUADRADO-MAGICO.png" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MESSI-1.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/wp-1beb77f85b20c0f00985540ecf439da9.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Arte-Pogba.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/FUTURISTIC.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MANE-1.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MESSI.webp" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/wp-067735f4d28d25d95a76c12876027767.webp" alt="Imagem do carrossel">
+        </div>
+        <div>
+            <p>Esse é exatamente o MESMO processo que eu e os meus alunos utilizamos para criar e vender artes esportivas todos os dias!</p><p>São detalhes que <b>apesar de ser muito poderoso</b> é <u>extremamente SIMPLES</u> de ser implementado…</p><p>…e você poderá fazer isso sem precisar de horas e horas de estudo.</p><p>(Se você se dedicar seriamente, você conseguirá <u>seguir todas as etapas em poucos dias</u>).</p><p>Nós iremos cobrir os principais detalhes sobre cada processo criativo e de venda e entender <b>como ter lucros expressivos como designer.</b></p>
+        </div>
+        <div>
+            <p>O QUE VOCÊ IRÁ RECEBER?</p>
+        </div>
+        <ul>
+            <li><b>Como Criar e Vender suas artes do ZERO:</b> Chega de Confusão! Você terá acesso ao passo a passo detalhado para criar e vender suas artes esportivas do absoluto ZERO. Perfeito se você for iniciante.</li>
+            <li><b>Estrutura Vencedora e de BAIXO RISCO:</b> Eu vou te disponibilizar os modelo de prospecção de clientes que eu uso e me traz muito lucro. Esse modelo é perfeito para você que está começando e quer iniciar com o pé direito.</li>
+            <li><b>PSD's de OURO:</b> Depois de anos criando artes esportivas e testando dezenas de variações, eu aprendi que ESTUDAR direto da fonte é o caminho mais rápido para a evolução como designer. Você terá acesso a todos os arquivos .PSD das aulas para estudar e modelar as artes.</li>
+            <li><b>Etapas passo-a-passo:</b> Eu te entrego todo o passo-a-passo que você deve seguir para criar e vender artes esportivas. Eu te entrego tudo mastigado, você não precisa quebrar a cabeça com nada!</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><span style="background-color:red;color:white">02 Bônus Incríveis</span> <br>você ganha alguns bônus extras além do curso.</h2>
+        <div class="price-table">
+            <h3>Plano<br>Básico</br></h3>
+            <div class="price">R$ 10,00</div>
+            <div class="period">Pagamento Único</div>
+            <ul>
+                <li><b>Curso Designer Bom de Bola</b></li>
+                <li>Garantia 7 Dias</li>
+                <li>1 Ano de Acesso</li>
+                <li><span style="color:#FF0000"><s><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</s></span></li>
+                <li><span style="color:#FF0000"><s><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</s></span></li>
+                <li><span style="color:#FF0000"><s><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</s></span></li>
+                <li><span style="color:#FF0000"><s><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</s></span></li>
+                <li><span style="color:#FF0000"><s><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</s></span></li>
+                <li><span style="color:#FF0000"><s><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</s></span></li>
+                <li><span style="color:#FF0000"><s><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</s></span></li>
+                <li><span style="color:#FF0000"><s><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</s></span></li>
+            </ul>
+            <a href="https://pivadesigner.com/upgrade-dbdb" class="button">LIBERAR PLANO BÁSICO</a>
+        </div>
+        <div class="price-table">
+            <h3>Mega<br>Oferta</br></h3>
+            <div class="price">R$ 37,00</div>
+            <div class="period">Em até 12x no cartão</div>
+            <ul>
+                <li><center><img src="https://pivadesigner.com/wp-content/uploads/2023/05/MEGA-DBDB-1.png" width="400"></center></li>
+                <li><b>Curso Designer Bom de Bola</b></li>
+                <li>Acesso Vitalício</li>
+                <li><B>GARANTIA DE 30 DIAS:</B> Nesse Plano você tem 30 dias para testar o produto e se achar que não é para você é só entrar em contato via WhatsApp solicitando o estorno total do valor.</li>
+                <li><b>PORTFÓLIO EDITÁVEL:</b> É Só importar suas artes e subir pro Behance (Saia na frente dos concorrentes do Behance com isso)</li>
+                <li><b>PACK DO DESIGNER ESPORTIVO:</b> Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original (Estou liberando o ouro)</li>
+                <li><b>CURSO TURBO DESIGNER:</b> O TURBO DESIGNER é um curso de tráfego pago para Designers... Faça a captação de clientes qualificados e pare de enviar 100 mensagens por dia por clientes que nem te respondem.</li>
+                <li><b>CURSO CARROSSEL PERFEITO:</b> Aprenda a criar Carrosseis Incríveis usando a Inteligência Artificial + Photoshop. (Domine a criação de um dos modelos mais requisitados do mercado O CARROSSEL)</li>
+                <li><b>CURSO DESIGNER DO FUTURO:</b> Você terá acesso aos Bastidores Detalhado de como eu fiz para sair do 0 e fiz R$ 9.167,84 em 30 dias como Designer do Futuro!</li>
+                <li><b>PSD das Aulas:</b> Você receberá o Arquivo editável .PSD de todas as aulas do curso (Aprenda por dentro da arte final olhando camada por camada)</li>
+                <li><b>DOC DESIGN:</b> Modelos de Contratos, Fluxo de Caixa, Proposta Comercial, Briefing e TrelloDesign (Se você é Designer e não tem tudo isso ainda, você ainda é AMADOR)</li>
+                <li><b>6 MESES CLOSE FRIENDS:</b> Tenha acesso ao Meus Melhores Amigos no Instagram, lá eu posto segredos e insights que você não encontra por ai gratuitamente. Os Bastidores da Empresa PivaDesigner, Tráfego Pago e Produtos Digitais!</li>
+            </ul>
+            <a href="https://pay.greenn.com.br/13915/offer/Mpz687/?b_id=12888&b_id=13916&ch_id=1826" class="button">LIBERAR MEGA OFERTA</a>
+        </div>
+    </div>
+
+    <div class="section dark">
+        <h2>NÃO LEU TUDO? VOU RESUMIR PARA VOCÊ...</h2>
+        <div>
+            <p>Se a ideia de criar, vender artes esportivas e chegar aos R$5mil por mês é uma meta boa para você…</p><p>Eu realmente acredito que adquirir o <b>“DBDB”</b> <b>é uma decisão inteligente.</b></p><p><u>Não posso garantir que você vai alcançar esse resultado.</u></p><p>Mas garanto que você terá acesso ao exato caminho que eu e meus alunos seguimos para alcançar essa primeira meta.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div>
+            <h2 class="elementor-heading-title elementor-size-default" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 500; font-size: 22px; line-height: 1.4em; font-family: Lato, sans-serif; color: #000000; opacity: 1; visibility: visible; transition: opacity 0.24s ease-in-out 0s; text-align: center;"><span style="border-style: none; font-weight: bold;"><i style="border-style: none;"><u style="border-style: none;">A proposta é simples e clara</u>:</i></span> Estou apresentando uma oportunidade de gerar renda expressiva como designer criando artes esportivas.</h2>
+        </div>
+    </div>
+
+    <div class="section">
+        <div>
+            <p>Estou falando de um modelo que você pode <span style="text-decoration: underline;">simplesmente replicar</span> e criar quantas artes quiser e aumentar exponencialmente suas vendas.</p><p>Estou falando de algo que servirá como o seu guia oficial para criar artes esportivas e que seja rentável no curto prazo.</p><p>Felizmente, adquirindo seu acesso hoje você garante 85% de desconto e + 3 bônus exclusivos.</p><p><b>Pagamento único, sem pegadinhas e 7 dias de garantia.</b></p>
+        </div>
+        <h2>Legal... mas se é tão bom, por que está tão barato?</h2>
+        <img src="https://pivadesigner.com/wp-content/uploads/2023/04/desconfiado.jpg" alt="Imagem do carrossel">
+        <div>
+            <p>Ahhh, eu sei que isso passou pela sua cabeça.</p><p>Se você prestar atenção, o valor de R$10,00 e R$37,00 não parece ser um valor aleatório para cobrar em um produto (e de fato não é).</p><p><b>Razão número 01:</b> O valor não se torna um obstáculo para ninguém.</p><p><b>Razão número 02:</b> Proteção contra curiosos.</p><p>Mesmo que o investimento seja baixo, o simples fato de cobrar já afasta curiosos em busca de “soluções gratuitas” na internet.</p><p>E quem gosta do produto, fica com vontade comprar outros treinamentos no futuro (essa é a “jogada”).</p><p><u>Sem pegadinhas, sem letras miúdas ou nada do tipo.</u></p>
+        </div>
+        <h2>Em quanto tempo eu irei receber meu acesso?</h2>
+        <div>
+            <p>Logo após a aprovação do seu pagamento, <i><b>você irá receber no seu e-mail</b></i> de compra os seus dados de acesso.</p><p><u>O produto está em uma Área de Membros premium</u> para você ter uma experiência melhor com o produto.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>VOCÊ NÃO TEM NADA A PERDER!</h2>
+        <div>
+            <p><strong>O PRODUTO TEM GARANTIA INCONDICIONAL DE 7 DIAS</strong></p>
+        </div>
+        <div>
+            <p><span style="font-weight: 400;">Você pode assistir todas as aulas, ter acesso a todas estratégias que eu e meus alunos usamos.</span></p><p><span style="font-weight: 400;">Se por </span><b>qualquer motivo</b><span style="font-weight: 400;"> você não ficar satisfeito ou não se adaptar, basta entrar em contato com a minha equipe dentro do prazo de </span><b>7 dias e solicitar o reembolso</b><span style="font-weight: 400;"> do valor investido.</span></p><p><b>Você receberá de volta cada centavo que pagou.</b></p><p><span style="font-weight: 400;">Eu estou </span><b>tirando todo o risco das suas mãos</b><span style="font-weight: 400;"> e colocando nas minhas.</span></p><p><span style="font-weight: 400;">Faça sua inscrição agora mesmo e veja com seus próprios olhos.</span></p>
+        </div>
+        <a href="#oferta" class="button">OK, ME CONVENCEU!</a>
+    </div>
+
+    <div class="section dark">
+        <h2>AINDA ESTÁ NA DÚVIDA? VEJA O QUE DIZEM...</h2>
+        <div class="image-carousel-container">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Imagem do carrossel">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Imagem do carrossel">
+        </div>
+        <a href="#oferta" class="button">OK, ME CONVENCEU!</a>
+    </div>
+</body>
+</html>
