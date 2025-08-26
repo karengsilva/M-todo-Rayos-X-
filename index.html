@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>Designer Bom de Bola — Estratégia para faturar com artes esportivas</title>
   <meta name="description" content="Aprenda a criar e vender artes esportivas. Método prático, templates e processo criativo passo a passo." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,126 +10,90 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #fff7f9;           /* base rosé */
-      --bg-2:#fff;             /* cartões */
-      --ink:#1f2937;           /* texto principal */
-      --muted:#6b7280;         /* texto secundário */
-      --rose-100:#ffe4e9;
-      --rose-200:#fecdd3;
-      --rose-300:#fda4af;
-      --rose-500:#f43f5e;      /* primário */
-      --rose-600:#e11d48;
-      --rose-700:#be123c;
-      --brand:#f43f5e;         /* botão gradiente start */
-      --brand-2:#fb7185;       /* botão gradiente end */
-      --accent:#f59e0b;        /* dourado */
-      --success:#10b981;       /* verde garantia */
-      --radius:22px;
-      --shadow:0 10px 30px rgba(244,63,94,.18);
+      --bg:#fff7f9;--bg-2:#fff;--ink:#1f2937;--muted:#6b7280;--rose-500:#f43f5e;--rose-700:#be123c;--brand:#f43f5e;--brand-2:#fb7185;--success:#10b981;--radius:22px;--shadow:0 6px 18px rgba(244,63,94,.15);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,Ubuntu,\"Noto Sans\",sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 600px at 80% -10%, #ffe4ec 10%, transparent 60%),
-        radial-gradient(900px 500px at -10% 10%, #fff1f5 10%, transparent 60%),
-        var(--bg);
-      line-height:1.55;
-    }
-    img{max-width:100%;display:block}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;}
+    img{max-width:100%;display:block;height:auto}
     a{text-decoration:none}
+    .wrap{width:min(1100px,94%);margin-inline:auto}
 
-    /* Container */
-    .wrap{width:min(1100px, 92%);margin-inline:auto}
-
-    /* Topbar */
+    /* Header */
     .topbar{position:sticky;top:0;z-index:50;background:#fff7fbcc;backdrop-filter:blur(10px);border-bottom:1px solid #ffe4ec}
     .topbar .inner{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
-    .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px}
-    .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 4px 10px rgba(244,63,94,.35)}
-    .top-cta{display:none}
-    @media (min-width:840px){.top-cta{display:inline-flex}}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.2rem;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;box-shadow:var(--shadow)}
-    .btn:hover{filter:brightness(.97);transform:translateY(-1px)}
-    .btn.ghost{background:#fff;border:2px solid var(--rose-200);color:var(--rose-700);box-shadow:none}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:800}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem 1rem;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;box-shadow:var(--shadow);font-size:.95rem}
+    .btn:hover{filter:brightness(.97)}
+    .btn.ghost{background:#fff;border:1px solid #ffd0da;color:var(--rose-700);box-shadow:none}
 
     /* Hero */
-    .hero{padding:48px 0 24px}
-    .hero-grid{display:grid;gap:28px}
-    @media (min-width:960px){.hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}}
-    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--rose-700);background:#fff;border:1px solid #ffd0da;padding:.35rem .7rem;border-radius:999px}
-    h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(1.9rem, 3.2vw + 1rem, 3.6rem);line-height:1.1;margin:10px 0 14px}
-    .lead{font-size:1.05rem;color:#374151;margin:0 0 18px}
+    .hero{padding:2rem 0}
+    .hero-grid{display:grid;gap:1.5rem}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1fr 1fr;align-items:center;gap:2rem}}
+    .eyebrow{display:inline-block;font-size:.8rem;color:var(--rose-700);background:#fff;border:1px solid #ffd0da;padding:.3rem .7rem;border-radius:999px;margin-bottom:.7rem}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.2;margin-bottom:.8rem}
+    .lead{font-size:1rem;color:#374151;margin-bottom:1rem}
     .vsl{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:16/9}
     .vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .bullet{display:flex;gap:.7rem;margin:.6rem 0;color:#374151}
-    .bullet i{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #ffd0da;color:var(--rose-700);font-style:normal;font-weight:700}
-    .trust{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;color:var(--muted);font-size:.9rem}
+    .bullet{display:flex;align-items:flex-start;gap:.6rem;margin:.4rem 0;font-size:.95rem}
+    .bullet i{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #ffd0da;color:var(--rose-700);font-size:.8rem;font-weight:700}
+    .trust{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.7rem;font-size:.85rem;color:var(--muted)}
 
     /* Sections */
-    section{padding:54px 0}
-    .section-title{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(1.5rem,2.3vw + .6rem,2.4rem);margin:.2rem 0 1rem}
+    section{padding:2.5rem 0}
+    .section-title{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,2.5vw,2.2rem);margin-bottom:1rem}
     .muted{color:var(--muted)}
 
-    /* Price tables */
-    .pricing{display:grid;gap:18px;margin-top:12px}
-    @media (min-width:900px){.pricing{grid-template-columns:1fr 1fr}}
-    .card{background:var(--bg-2);border:1px solid #ffe1ea;border-radius:24px;padding:22px;box-shadow:var(--shadow)}
-    .price{font-size:2.3rem;font-weight:800;color:var(--rose-700)}
-    .period{font-size:.95rem;color:var(--muted)}
-    .list{list-style:none;padding:0;margin:14px 0 0}
-    .list li{display:flex;gap:.6rem;margin:.45rem 0}
-    .list li::before{content:"✓";color:var(--success);font-weight:900}
-    .ribbon{display:inline-block;background:linear-gradient(135deg,var(--rose-500),var(--rose-700));color:#fff;padding:.38rem .7rem;border-radius:999px;font-weight:700;font-size:.8rem;letter-spacing:.3px}
+    /* Pricing */
+    .pricing{display:grid;gap:1rem;margin-top:1rem}
+    @media(min-width:800px){.pricing{grid-template-columns:1fr 1fr;}}
+    .card{background:#fff;border:1px solid #ffe1ea;border-radius:18px;padding:1.2rem;box-shadow:var(--shadow)}
+    .price{font-size:1.9rem;font-weight:800;color:var(--rose-700);margin:.5rem 0}
+    .period{font-size:.9rem;color:var(--muted)}
+    .list{list-style:none;margin-top:.7rem}
+    .list li{margin:.35rem 0;display:flex;align-items:flex-start;gap:.4rem;font-size:.9rem}
+    .list li::before{content:"✓";color:var(--success);font-weight:700}
+    .ribbon{display:inline-block;background:linear-gradient(135deg,var(--rose-500),var(--rose-700));color:#fff;padding:.3rem .6rem;border-radius:999px;font-size:.75rem;margin-bottom:.5rem}
 
-    /* Carousel (scroll-snap) */
-    .carousel{position:relative}
-    .track{display:grid;grid-auto-flow:column;grid-auto-columns:80%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-    .track::-webkit-scrollbar{height:8px}
+    /* Carousel */
+    .carousel{position:relative;margin-top:1rem}
+    .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.5rem}
+    .track::-webkit-scrollbar{height:6px}
     .track::-webkit-scrollbar-thumb{background:#ffd0da;border-radius:999px}
-    @media (min-width:860px){.track{grid-auto-columns:32%}}
-    .item{scroll-snap-align:center;background:#fff;border:1px solid #ffe1ea;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
-    .car-btn{position:absolute;top:42%;transform:translateY(-50%);border:0;background:#fff;border:1px solid #ffd0da;width:42px;height:42px;border-radius:999px;display:grid;place-items:center;box-shadow:var(--shadow)}
-    .car-btn:hover{filter:brightness(.98)}
-    .car-btn.prev{left:-6px}
-    .car-btn.next{right:-6px}
-
-    /* Dark band (testimonials) */
-    .band{background:linear-gradient(180deg,#fff,#ffe9f0)}
-    .dark{background:#1f2937;color:#f9fafb}
-    .dark .muted{color:#cbd5e1}
-    .testimonial{border:1px solid #374151;border-radius:18px;overflow:hidden}
+    .item{flex:0 0 75%;scroll-snap-align:center;background:#fff;border:1px solid #ffe1ea;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+    @media(min-width:800px){.item{flex:0 0 30%}}
+    .car-btn{display:none}
+    @media(min-width:900px){.car-btn{display:grid;place-items:center;position:absolute;top:40%;width:36px;height:36px;background:#fff;border:1px solid #ffd0da;border-radius:50%;box-shadow:var(--shadow);cursor:pointer}
+      .car-btn.prev{left:-10px}
+      .car-btn.next{right:-10px}}
 
     /* FAQ */
-    details{border:1px solid #ffe1ea;border-radius:16px;padding:14px 16px;background:#fff}
-    details+details{margin-top:12px}
-    summary{cursor:pointer;font-weight:700}
-    details[open]{box-shadow:var(--shadow)}
+    details{border:1px solid #ffe1ea;border-radius:12px;padding:.8rem 1rem;background:#fff}
+    details+details{margin-top:.6rem}
+    summary{cursor:pointer;font-weight:600;font-size:.95rem}
 
-    /* Footer + sticky CTA */
-    footer{padding:28px 0;color:var(--muted);border-top:1px solid #ffe1ea}
-    .sticky-cta{position:fixed;inset:auto 0 14px 0;display:flex;justify-content:center;z-index:60}
-    .sticky-cta .inner{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #ffd0da;padding:10px 12px;border-radius:999px;box-shadow:var(--shadow)}
-    .sticky-cta p{margin:0;font-weight:700}
-    @media (min-width:900px){.sticky-cta{display:none}}
+    /* Dark Section */
+    .dark{background:#1f2937;color:#f9fafb}
+    .dark .muted{color:#cbd5e1}
+    .testimonial{border-radius:12px;overflow:hidden;border:1px solid #374151}
 
-    /* Utility */
-    .center{text-align:center}
-    .grid-2{display:grid;gap:16px}
-    @media (min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-    .seal{display:flex;align-items:center;gap:10px;background:#fff;border:1px dashed #ffd0da;color:#1f2937;border-radius:14px;padding:10px 14px}
+    /* Footer */
+    footer{padding:1.2rem 0;color:var(--muted);border-top:1px solid #ffe1ea;font-size:.85rem;text-align:center}
+
+    /* Sticky CTA (mobile) */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;background:#fff;padding:.6rem;border-top:1px solid #ffd0da;box-shadow:var(--shadow)}
+    .sticky-cta .btn{flex:1;text-align:center}
+    @media(min-width:900px){.sticky-cta{display:none}}
   </style>
 </head>
 <body>
   <!-- Topbar -->
   <div class="topbar">
     <div class="wrap inner">
-      <div class="brand"><span class="dot"></span> Designer Bom de Bola</div>
+      <div class="brand">⚽ Designer Bom de Bola</div>
       <nav class="hide-mobile">
         <a class="btn ghost" href="#precos">Planos</a>
-        <a class="btn top-cta" href="#comprar">Comprar agora</a>
+        <a class="btn" href="#comprar">Comprar</a>
       </nav>
     </div>
   </div>
@@ -138,188 +102,106 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Vagas limitadas • oferta especial</span>
-        <h1>A estratégia para faturar mais de <span style="color:var(--rose-700)">R$ 5 mil/mês</span> com artes esportivas</h1>
-        <p class="lead">Acesso imediato ao método que uso para criar e vender artes esportivas: modelos, bastidores do processo criativo e abordagem de vendas que funciona.</p>
-        <div class="bullet"><i>1</i>Aprenda a criar <b>backgrounds profissionais</b> em poucos passos</div>
-        <div class="bullet"><i>2</i>Domine <b>iluminação realista</b> e composição no Photoshop</div>
-        <div class="bullet"><i>3</i>Aborde e venda para jogadores com <b>scripts prontos</b></div>
+        <span class="eyebrow">Oferta especial • acesso imediato</span>
+        <h1>Fature mais de <span style="color:var(--rose-700)">R$5 mil/mês</span> com artes esportivas</h1>
+        <p class="lead">Método prático para criar e vender artes esportivas. Templates prontos, bastidores do meu processo criativo e scripts de venda.</p>
+        <div class="bullet"><i>1</i> Aprenda a criar <b>backgrounds profissionais</b></div>
+        <div class="bullet"><i>2</i> Domine <b>iluminação realista</b> no Photoshop</div>
+        <div class="bullet"><i>3</i> Venda com <b>scripts prontos</b> para atletas</div>
         <div class="trust">
-          <span class="seal">🔒 Checkout 100% seguro</span>
-          <span class="seal">✅ Garantia incondicional de 7 dias</span>
+          <span>🔒 Checkout seguro</span>
+          <span>✅ Garantia 7 dias</span>
         </div>
-        <p style="margin-top:14px">
-          <a class="btn" href="#comprar">Quero entrar agora</a>
-        </p>
+        <p style="margin-top:1rem"><a class="btn" href="#comprar">Quero entrar agora</a></p>
       </div>
-      <div>
-        <div class="vsl">
-          <iframe src="https://player.vimeo.com/video/500157822" title="VSL" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
+      <div><div class="vsl"><iframe src="https://player.vimeo.com/video/500157822" allowfullscreen></iframe></div></div>
     </div>
   </header>
 
-  <!-- O que você vai ver -->
+  <!-- Carrossel -->
   <section>
-    <div class="wrap center">
-      <h2 class="section-title">O que você vai aprender na prática</h2>
-      <p class="muted">Templates, PSDs e meu processo criativo nos mínimos detalhes.</p>
-    </div>
-    <div class="wrap carousel" style="margin-top:18px">
-      <button class="car-btn prev" aria-label="anterior" data-dir="-1">&#10094;</button>
-      <div class="track" id="car-arts">
-        <figure class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/CR7-SIM.webp" alt="CR7"><figcaption style="padding:10px">Composição e luz</figcaption></figure>
-        <figure class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/CAVANI.webp" alt="Cavani"><figcaption style="padding:10px">Cortes e desfoques</figcaption></figure>
-        <figure class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/DEPAY.webp" alt="Depay"><figcaption style="padding:10px">Texturas e partículas</figcaption></figure>
-        <figure class="item"><img src="https://pivadesigner.com/wp-content/uploads/2021/05/QUADRADO-MAGICO.png" alt="Quadrado Mágico"><figcaption style="padding:10px">Color grading</figcaption></figure>
+    <div class="wrap">
+      <h2 class="section-title center">Exemplos de artes</h2>
+      <div class="carousel">
+        <div class="track">
+          <div class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/CR7-SIM.webp" alt="CR7"></div>
+          <div class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/CAVANI.webp" alt="Cavani"></div>
+          <div class="item"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/DEPAY.webp" alt="Depay"></div>
+        </div>
       </div>
-      <button class="car-btn next" aria-label="próximo" data-dir="1">&#10095;</button>
     </div>
   </section>
 
-  <!-- Perguntas frequentes (estilo acordeão) -->
-  <section class="band">
-    <div class="wrap grid-2">
-      <div>
-        <h2 class="section-title">Perguntas que mais recebo</h2>
-        <details>
-          <summary>Como criar backgrounds incríveis em poucos passos?</summary>
-          <div class="muted">Você vai seguir um framework simples (base, foco, efeito, textura) e usar nossos PSDs para acelerar.</div>
-        </details>
-        <details>
-          <summary>Como viver de design e ser lucrativo?</summary>
-          <div class="muted">Mostro posicionamento, precificação e um funil de venda direto para atletas e influenciadores.</div>
-        </details>
-        <details>
-          <summary>Como criar iluminação realista no Photoshop?</summary>
-          <div class="muted">Camadas de luz, mapas de gradiente e blend modes prontos para copiar e colar.</div>
-        </details>
-        <details>
-          <summary>Como abordar e vender para jogadores?</summary>
-          <div class="muted">Scripts de DM, proposta visual e um calendário de follow-up para fechar com previsibilidade.</div>
-        </details>
-      </div>
-      <div>
-        <h2 class="section-title">Bônus e diferenciais</h2>
-        <ul class="list">
-          <li>Modelos de artes esportivas para você <b>modelar agora</b></li>
-          <li>Processo criativo <b>gravado passo a passo</b></li>
-          <li>Checklist de entrega para <b>aprovar de primeira</b></li>
-          <li>Grupo de suporte para tirar dúvidas</li>
-        </ul>
-      </div>
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <details><summary>Como criar backgrounds incríveis?</summary><p class="muted">Framework prático com nossos PSDs para acelerar.</p></details>
+      <details><summary>Como viver de design?</summary><p class="muted">Explico posicionamento, precificação e funil de vendas para atletas.</p></details>
+      <details><summary>Como criar iluminação realista?</summary><p class="muted">Uso de camadas de luz, gradientes e blend modes.</p></details>
+      <details><summary>Como vender para jogadores?</summary><p class="muted">Scripts de mensagens e calendário de follow-up.</p></details>
     </div>
   </section>
 
   <!-- Preços -->
   <section id="precos">
-    <div class="wrap center">
-      <h2 class="section-title">Escolha seu acesso</h2>
-      <p class="muted">Oferta por tempo limitado.</p>
+    <div class="wrap">
+      <h2 class="section-title center">Escolha seu acesso</h2>
       <div class="pricing">
         <div class="card">
-          <span class="ribbon">Mais barato</span>
+          <span class="ribbon">Econômico</span>
           <h3>Plano Básico</h3>
-          <div class="price">R$ 10</div>
+          <div class="price">R$10</div>
           <div class="period">Pagamento único</div>
           <ul class="list">
             <li>Curso Designer Bom de Bola</li>
             <li>Garantia 7 dias</li>
             <li>1 ano de acesso</li>
           </ul>
-          <p style="margin-top:12px"><a class="btn" id="comprar" href="https://pivadesigner.com/upgrade-dbdb">Liberar Plano Básico</a></p>
+          <p><a class="btn" id="comprar" href="https://pivadesigner.com/upgrade-dbdb">Liberar Básico</a></p>
         </div>
-        <div class="card" style="border-width:2px">
+        <div class="card">
           <span class="ribbon">Mais completo</span>
           <h3>Mega Oferta</h3>
-          <div class="price">R$ 37</div>
-          <div class="period">Em até 12x no cartão</div>
+          <div class="price">R$37</div>
+          <div class="period">Parcelado em até 12x</div>
           <ul class="list">
-            <li><b>Curso Designer Bom de Bola</b></li>
+            <li><b>Curso completo Designer Bom de Bola</b></li>
             <li>Acesso vitalício</li>
-            <li>Garantia de 30 dias</li>
+            <li>Garantia 30 dias</li>
           </ul>
-          <p style="margin-top:12px"><a class="btn" href="https://pay.greenn.com.br/13915/offer/Mpz687/?b_id=12888&b_id=13916&ch_id=1826">Liberar Mega Oferta</a></p>
+          <p><a class="btn" href="https://pay.greenn.com.br/13915/offer/Mpz687/?b_id=12888&b_id=13916&ch_id=1826">Liberar Mega</a></p>
         </div>
       </div>
-      <p class="muted" style="margin-top:10px">Ao clicar, você será direcionado ao provedor de pagamentos seguro.</p>
     </div>
   </section>
 
   <!-- Depoimentos -->
   <section class="dark">
     <div class="wrap">
-      <h2 class="section-title">O que dizem nossos alunos</h2>
+      <h2 class="section-title center">O que dizem nossos alunos</h2>
       <div class="carousel">
-        <div class="track" id="car-depo">
-          <figure class="item testimonial"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 1"></figure>
-          <figure class="item testimonial"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 2"></figure>
+        <div class="track">
+          <div class="item testimonial"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png"></div>
+          <div class="item testimonial"><img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png"></div>
         </div>
-      </div>
-      <p class="center" style="margin-top:16px"><a class="btn" href="#comprar">Ok, me convenceu!</a></p>
-    </div>
-  </section>
-
-  <!-- Garantia / Selos -->
-  <section>
-    <div class="wrap grid-2">
-      <div>
-        <h2 class="section-title">Garantia blindada</h2>
-        <p class="muted">Se dentro de 7 dias você não amar o conteúdo, devolvemos 100% do seu dinheiro. Simples assim.</p>
-        <div class="trust">
-          <span class="seal">🛡️ Satisfação garantida</span>
-          <span class="seal">🔐 Pagamento criptografado</span>
-          <span class="seal">💬 Suporte por e-mail</span>
-        </div>
-      </div>
-      <div>
-        <img src="https://dummyimage.com/720x480/fdf2f8/1f2937.png&text=Sua+garantia+%E2%80%A2+7+dias" alt="Selo de garantia">
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="wrap">
-      <p class="muted">© <span id="year"></span> Designer Bom de Bola. Todos os direitos reservados. Ao comprar você concorda com nossos termos e política de privacidade.</p>
-    </div>
+    <p>© <span id="year"></span> Designer Bom de Bola. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Sticky CTA (mobile) -->
-  <div class="sticky-cta" id="sticky">
-    <div class="inner">
-      <p>🔥 Oferta ativa</p>
-      <a class="btn" href="#comprar">Entrar agora</a>
-    </div>
-  </div>
+  <!-- Sticky CTA -->
+  <div class="sticky-cta"><a class="btn" href="#comprar">Quero entrar agora</a></div>
 
   <script>
-    // util: smooth anchor
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{const id=a.getAttribute('href').slice(1);const el=document.getElementById(id);if(el){e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});}})
-    })
-
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear()
-
-    // simple carousel buttons (scroll-snap)
-    function bindCarousel(root){
-      const track=root.querySelector('.track');
-      const prev=root.querySelector('.prev');
-      const next=root.querySelector('.next');
-      function move(dir){track.scrollBy({left: track.clientWidth*0.9*dir, behavior:'smooth'})}
-      prev&&prev.addEventListener('click',()=>move(-1));
-      next&&next.addEventListener('click',()=>move(1));
-    }
-    document.querySelectorAll('.carousel').forEach(bindCarousel)
-
-    // sticky CTA show/hide after hero
-    const sticky=document.getElementById('sticky');
-    const hero=document.querySelector('.hero');
-    const io=new IntersectionObserver(([e])=>{sticky.style.display=e.isIntersecting? 'none':'flex'},{rootMargin:'-80px 0px 0px 0px'});
-    io.observe(hero)
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
 
