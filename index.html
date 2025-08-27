@@ -1,9 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Make Pro</title
+  <title>Curso Make Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    Você disse:
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; background: #fff; }
+
+    /* Container */
+    .wrap { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* Botão padrão */
+    .btn {
+      background: #e91e63;
+      color: #fff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all .3s ease;
+    }
+    .btn:hover { background: #d81b60; }
+
+    /* Topbar */
+    .topbar {
+      background: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    .topbar .inner { display: flex; justify-content: space-between; align-items: center; }
+    .topbar .brand { font-weight: 700; font-size: 1.5rem; color: #e91e63; }
+
+    /* Hero */
+    .hero { padding: 5rem 0; background: linear-gradient(90deg,#fce4ec,#fff); }
+    .hero-grid { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; color: #e91e63; line-height: 1.2; }
+    .hero .lead { font-size: 1.2rem; margin-bottom: 1rem; color: #444; }
+    .eyebrow { text-transform: uppercase; font-weight: 700; color: #ff4081; margin-bottom: .5rem; display: inline-block; font-size: 0.9rem; }
+    .bullet { display: flex; align-items: center; margin: .4rem 0; font-size: 1rem; }
+    .bullet i { color: #e91e63; margin-right: .5rem; font-weight: bold; }
+    .trust { display: flex; gap: 1rem; margin-top: 1rem; font-size: .9rem; color: #555; }
+    .vsl iframe { width: 100%; height: 320px; border-radius: 12px; border: none; }
+
+    /* Seções */
+    section { padding: 4rem 0; }
+    section h2.section-title { font-size: 2rem; margin-bottom: 1rem; color: #e91e63; text-align: center; }
+    section .muted { color: #666; margin: 0 auto 2rem; max-width: 700px; text-align: center; }
+
+    /* Benefícios */
+    .benefits { display: grid; gap: 1rem; max-width: 700px; margin: 0 auto; }
+    .benefits .bullet { font-size: 1.1rem; }
+
+    /* Oferta */
+    .pricing { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; justify-content: center; }
+    .card {
+      background: #fff; border-radius: 16px; padding: 2rem;
+      flex: 1 1 300px; box-shadow: 0 4px 20px rgba(0,0,0,.08);
+      position: relative; text-align: center; transition: transform .3s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .ribbon { position: absolute; top: -10px; right: -10px; background: #e91e63; color: #fff; padding: .4rem 1rem; font-size: .8rem; font-weight: 700; border-radius: 4px; }
+    .card h3 { font-size: 1.5rem; margin-bottom: .5rem; color: #e91e63; }
+    .card .price { font-size: 2rem; font-weight: 700; margin-bottom: .2rem; }
+    .card .period { color: #888; margin-bottom: 1rem; }
+    .card ul { list-style: none; text-align: left; margin: 1rem 0; padding: 0; }
+    .card ul li { margin-bottom: .5rem; }
+
+    /* Depoimentos */
+    .dark { background: #fce4ec; }
+    .carousel { display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0; }
+    .carousel img { border-radius: 16px; width: 240px; height: auto; }
+
+    /* FAQ */
+    details { margin-bottom: 1rem; padding: 1rem; border-radius: 12px; background: #fff0f5; }
+    summary { font-weight: 600; cursor: pointer; }
+    details p { margin-top: .5rem; }
+
+    /* Footer */
+    footer { background: #fff; padding: 2rem 0; text-align: center; border-top: 1px solid #eee; color: #555; }
+    footer a { color: #e91e63; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* CTA fixo */
+    .sticky-cta { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; z-index: 1000; }
+    .sticky-cta .btn { width: 100%; text-align: center; padding: 1rem; }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .hero-grid { flex-direction: column; text-align: center; }
+      .trust { justify-content: center; }
+    }
+  </style>
+</head>
 <body>
   <!-- Topbar -->
   <header class="topbar">
@@ -28,7 +121,7 @@
       </div>
       <div>
         <div class="vsl">
-          <iframe src="https://drive.google.com/file/d/1XhONSlB2DEVdza6jLAkVt-8q-3xWI07b/view?usp=sharing" title="Apresentação do Curso" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Apresentação do Curso" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -39,10 +132,12 @@
     <div class="wrap">
       <h2 class="section-title">Por que este curso é diferente?</h2>
       <p class="muted">Não é só mais um curso de maquiagem. Aqui você recebe acompanhamento, estratégias práticas e acesso vitalício ao conteúdo.</p>
-      <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
-      <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
-      <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
-      <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
+      <div class="benefits">
+        <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
+        <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
+        <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
+        <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
+      </div>
     </div>
   </section>
 
@@ -54,25 +149,25 @@
         <div class="card">
           <span class="ribbon">Mais acessado</span>
           <h3>Curso Completo</h3>
-          <p class="price">R$ 27,00 </p>
+          <p class="price">R$ 27,00</p>
           <p class="period">Acesso vitalício</p>
-          <ul class="list">
+          <ul>
             <li>+40 videoaulas em HD</li>
             <li>Certificado profissional</li>
             <li>Bônus de automaquiagem</li>
             <li>Grupo exclusivo de alunas</li>
           </ul>
-          <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn" style="margin-top:1rem;">Garantir acesso</a>
+          <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir acesso</a>
         </div>
         <div class="card">
-          <h3>Curso + Bônus </h3>
-          <p class="price">R$ 19,90 </p>
+          <h3>Curso + Bônus</h3>
+          <p class="price">R$ 19,90</p>
           <p class="period">Acesso vitalício</p>
-          <ul class="list">
+          <ul>
             <li>Tudo do Curso Completo</li>
             <li>Certificado profissional</li>
           </ul>
-          <a href="https://go.perfectpay.com.br/PPU38CPSQ61" class="btn" style="margin-top:1rem;">Quero com mentoria</a>
+          <a href="https://go.perfectpay.com.br/PPU38CPSQ61" class="btn">Quero com mentoria</a>
         </div>
       </div>
     </div>
@@ -83,14 +178,10 @@
     <div class="wrap">
       <h2 class="section-title">O que nossas alunas dizem</h2>
       <div class="carousel">
-        <div class="track">
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/55.webp"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/66.webp"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/77.webp"></div>
-        </div>
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp">
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp">
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp">
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/55.webp">
       </div>
     </div>
   </section>
@@ -99,18 +190,9 @@
   <section>
     <div class="wrap">
       <h2 class="section-title">Perguntas Frequentes</h2>
-      <details>
-        <summary>O curso é realmente online?</summary>
-        <p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p>
-      </details>
-      <details>
-        <summary>Vou receber certificado?</summary>
-        <p>Claro! Ao concluir o curso você recebe um certificado profissional.</p>
-      </details>
-      <details>
-        <summary>Tenho suporte se tiver dúvidas?</summary>
-        <p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p>
-      </details>
+      <details><summary>O curso é realmente online?</summary><p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p></details>
+      <details><summary>Vou receber certificado?</summary><p>Claro! Ao concluir o curso você recebe um certificado profissional.</p></details>
+      <details><summary>Tenho suporte se tiver dúvidas?</summary><p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p></details>
     </div>
   </section>
 
@@ -122,297 +204,9 @@
     </div>
   </footer>
 
-  <!-- Botão fixo Mobile -->
+  <!-- CTA fixo -->
   <div class="sticky-cta">
     <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir minha vaga agora</a>
   </div>
-</body> 
-<style>
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background: #fff;
-}
-
-/* Container */
-.wrap {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Topbar */
-.topbar {
-  background: #fff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.topbar .brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #e91e63;
-}
-.topbar .btn {
-  background: #e91e63;
-  color: #fff;
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.topbar .btn:hover {
-  background: #d81b60;
-}
-
-/* Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
-  background: linear-gradient(90deg, #fce4ec, #fff);
-}
-.hero-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #e91e63;
-}
-.hero .lead {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
-.hero .eyebrow {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ff4081;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-.bullet {
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #333;
-}
-.bullet i {
-  color: #e91e63;
-  margin-right: 0.5rem;
-}
-.trust {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-.vsl iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 12px;
-  border: none;
-}
-
-/* Seção Benefícios */
-section h2.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #e91e63;
-}
-.muted {
-  color: #666;
-  margin-bottom: 2rem;
-}
-section .bullet {
-  font-size: 1rem;
-}
-
-/* Oferta */
-.pricing {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  flex: 1 1 300px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.ribbon {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #e91e63;
-  color: #fff;
-  padding: 0.4rem 1rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border-radius: 4px;
-}
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #e91e63;
-}
-.card .price {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
-  color: #333;
-}
-.card .period {
-  color: #888;
-  margin-bottom: 1rem;
-}
-.card .list {
-  list-style: none;
-  margin-bottom: 1.5rem;
-}
-.card .list li {
-  margin-bottom: 0.5rem;
-}
-.card .btn {
-  display: inline-block;
-}
-
-/* Depoimentos */
-.dark {
-  background: #fce4ec;
-  padding: 4rem 0;
-}
-.carousel {
-  overflow-x: auto;
-  display: flex;
-  gap: 1rem;
-  padding-top: 2rem;
-}
-.carousel .item img {
-  border-radius: 16px;
-  width: 250px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* FAQ */
-details {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 12px;
-  background: #fff0f5;
-  cursor: pointer;
-}
-details summary {
-  font-weight: 600;
-}
-details p {
-  margin-top: 0.5rem;
-}
-
-/* Footer */
-footer {
-  background: #fff;
-  padding: 2rem 0;
-  text-align: center;
-  color: #555;
-  border-top: 1px solid #eee;
-}
-footer a {
-  color: #e91e63;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Botão fixo Mobile */
-.sticky-cta {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px;
-  z-index: 1000;
-}
-.sticky-cta .btn {
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero-grid {
-    flex-direction: column;
-  }
-  .pricing {
-    flex-direction: column;
-  }
-  .carousel .item img {
-    width: 200px;
-  }
-}
-</style>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Make Pro</title>
-  
-  <style>
-  /* Reset básico */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; background: #fff; }
-
-  /* Container */
-  .wrap { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-  /* Topbar */
-  .topbar { background: #fff; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-  .topbar .brand { font-weight: 700; font-size: 1.5rem; color: #e91e63; }
-  .topbar .btn { background: #e91e63; color: #fff; padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
-  .topbar .btn:hover { background: #d81b60; }
-
-  /* Hero */
-  .hero { display: flex; align-items: center; justify-content: center; padding: 4rem 0; background: linear-gradient(90deg, #fce4ec, #fff); }
-  .hero-grid { display: flex; gap: 2rem; flex-wrap: wrap; }
-  .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #e91e63; }
-  .hero .lead { font-size: 1.1rem; margin-bottom: 1rem; color: #555; }
-  .hero .eyebrow { text-transform: uppercase; font-weight: 700; color: #ff4081; margin-bottom: 0.5rem; display: inline-block; }
-  .bullet { display: flex; align-items: center; margin: 0.5rem 0; font-size: 1rem; color: #333; }
-  .bullet i { color: #e91e63; margin-right: 0.5rem; }
-  .trust { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.9rem; color: #555; }
-  .vsl iframe { width: 100%; height: 300px; border-radius: 12px; border: none; }
-
-  /* Seção Benefícios */
-  section h2.section-title { font-size: 2rem; margin-bottom: 1rem; color: #e91e63; }
-  .muted
+</body>
+</html>
