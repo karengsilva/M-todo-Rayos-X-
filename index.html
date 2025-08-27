@@ -1,147 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Make Pro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Maquiagem Profissional</title>
+
+  <!-- Fonte moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; background: #fff; }
-
-    /* Container */
-    .wrap { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-    /* Botão padrão */
-    .btn {
-      background: #e91e63;
-      color: #fff;
-      padding: 0.8rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: all .3s ease;
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .btn:hover { background: #d81b60; }
-
-    /* Topbar */
-    .topbar {
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
       background: #fff;
-      padding: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,.05);
-      position: sticky; top: 0; z-index: 1000;
     }
-    .topbar .inner { display: flex; justify-content: space-between; align-items: center; }
-    .topbar .brand { font-weight: 700; font-size: 1.5rem; color: #e91e63; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
 
-    /* Hero */
-    .hero { padding: 5rem 0; background: linear-gradient(90deg,#fce4ec,#fff); }
-    .hero-grid { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
-    .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; color: #e91e63; line-height: 1.2; }
-    .hero .lead { font-size: 1.2rem; margin-bottom: 1rem; color: #444; }
-    .eyebrow { text-transform: uppercase; font-weight: 700; color: #ff4081; margin-bottom: .5rem; display: inline-block; font-size: 0.9rem; }
-    .bullet { display: flex; align-items: center; margin: .4rem 0; font-size: 1rem; }
-    .bullet i { color: #e91e63; margin-right: .5rem; font-weight: bold; }
-    .trust { display: flex; gap: 1rem; margin-top: 1rem; font-size: .9rem; color: #555; }
-    .vsl iframe { width: 100%; height: 320px; border-radius: 12px; border: none; }
+    /* ===== GLOBAL ===== */
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.5rem; }
+    h2.section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #a72cc4;
+    }
+    p.lead {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
 
-    /* Seções */
-    section { padding: 4rem 0; }
-    section h2.section-title { font-size: 2rem; margin-bottom: 1rem; color: #e91e63; text-align: center; }
-    section .muted { color: #666; margin: 0 auto 2rem; max-width: 700px; text-align: center; }
+    /* ===== HERO ===== */
+    section.hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+    }
+    section.hero h1 { font-size: 2.8rem; }
+    section.hero .eyebrow {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffe6f9;
+    }
+    .bullet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      margin: 0.4rem 0;
+    }
+    .bullet i {
+      color: #00ffae;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+    .trust {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
 
-    /* Benefícios */
-    .benefits { display: grid; gap: 1rem; max-width: 700px; margin: 0 auto; }
-    .benefits .bullet { font-size: 1.1rem; }
+    /* ===== VSL ===== */
+    .vsl {
+      margin-top: 2rem;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .vsl iframe {
+      position: absolute;
+      top:0; left:0;
+      width: 100%;
+      height: 100%;
+      border:0;
+    }
 
-    /* Oferta */
-    .pricing { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; justify-content: center; }
+    /* ===== PRICING ===== */
+    .pricing {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
     .card {
-      background: #fff; border-radius: 16px; padding: 2rem;
-      flex: 1 1 300px; box-shadow: 0 4px 20px rgba(0,0,0,.08);
-      position: relative; text-align: center; transition: transform .3s ease;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      position: relative;
+      transition: transform 0.3s;
     }
-    .card:hover { transform: translateY(-6px); }
-    .ribbon { position: absolute; top: -10px; right: -10px; background: #e91e63; color: #fff; padding: .4rem 1rem; font-size: .8rem; font-weight: 700; border-radius: 4px; }
-    .card h3 { font-size: 1.5rem; margin-bottom: .5rem; color: #e91e63; }
-    .card .price { font-size: 2rem; font-weight: 700; margin-bottom: .2rem; }
-    .card .period { color: #888; margin-bottom: 1rem; }
-    .card ul { list-style: none; text-align: left; margin: 1rem 0; padding: 0; }
-    .card ul li { margin-bottom: .5rem; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { color: #a72cc4; }
+    .card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6ec4;
+    }
+    .ribbon {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff6ec4;
+      color: white;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      border-radius: 10px;
+    }
 
-    /* Depoimentos */
-    .dark { background: #fce4ec; }
-    .carousel { display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0; }
-    .carousel img { border-radius: 16px; width: 240px; height: auto; }
+    /* ===== CAROUSEL ===== */
+    .carousel {
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel .track {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      gap: 1rem;
+    }
+    .carousel img {
+      border-radius: 15px;
+      width: 300px;
+      height: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-    /* FAQ */
-    details { margin-bottom: 1rem; padding: 1rem; border-radius: 12px; background: #fff0f5; }
-    summary { font-weight: 600; cursor: pointer; }
-    details p { margin-top: .5rem; }
+    /* ===== FAQ ===== */
+    details {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: 600;
+      color: #a72cc4;
+    }
 
-    /* Footer */
-    footer { background: #fff; padding: 2rem 0; text-align: center; border-top: 1px solid #eee; color: #555; }
-    footer a { color: #e91e63; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #fafafa;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer a { color: #a72cc4; }
 
-    /* CTA fixo */
-    .sticky-cta { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; z-index: 1000; }
-    .sticky-cta .btn { width: 100%; text-align: center; padding: 1rem; }
-
-    /* Responsivo */
+    /* ===== STICKY CTA (mobile) ===== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+      display: none;
+    }
     @media (max-width: 768px) {
-      .hero-grid { flex-direction: column; text-align: center; }
-      .trust { justify-content: center; }
+      .sticky-cta { display: block; }
     }
   </style>
 </head>
 <body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <div class="wrap inner">
-      <div class="brand">✨ Curso Make Pro</div>
-      <a href="#oferta" class="btn">Quero me inscrever</a>
-    </div>
-  </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Curso Online Exclusivo</span>
-        <h1>Torne-se a maquiadora <br>mais disputada da sua cidade</h1>
-        <p class="lead">Aprenda técnicas modernas de maquiagem, mesmo que esteja começando do zero, e conquiste clientes fiéis todos os dias.</p>
-        <div class="bullet"><i>✓</i><span>Passo a passo do básico ao avançado</span></div>
-        <div class="bullet"><i>✓</i><span>Certificado profissional incluso</span></div>
-        <div class="bullet"><i>✓</i><span>Bônus exclusivos e suporte direto</span></div>
-        <a href="#oferta" class="btn" style="margin-top:1rem;">Garantir minha vaga</a>
-        <div class="trust"><span>🔒 Pagamento 100% seguro</span><span>📜 Certificado válido</span></div>
+    <div class="wrap">
+      <span class="eyebrow">Curso Online Exclusivo</span>
+      <h1>Torne-se a maquiadora <br>mais disputada da sua cidade</h1>
+      <p class="lead">Aprenda técnicas modernas de maquiagem, mesmo que esteja começando do zero, e conquiste clientes fiéis todos os dias.</p>
+
+      <div class="bullet"><i>✓</i><span>Passo a passo do básico ao avançado</span></div>
+      <div class="bullet"><i>✓</i><span>Certificado profissional incluso</span></div>
+      <div class="bullet"><i>✓</i><span>Bônus exclusivos e suporte direto</span></div>
+
+      <a href="#oferta" class="btn">Garantir minha vaga</a>
+
+      <div class="trust">
+        <span>🔒 Pagamento 100% seguro</span>
+        <span>📜 Certificado válido</span>
       </div>
-      <div>
-        <div class="vsl">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Apresentação do Curso" allowfullscreen></iframe>
-        </div>
+
+      <div class="vsl">
+        <iframe src="https://www.youtube.com/embed/Zr8zU7zQ30w" title="Apresentação do Curso" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- Benefícios -->
+  <!-- BENEFÍCIOS -->
   <section>
     <div class="wrap">
       <h2 class="section-title">Por que este curso é diferente?</h2>
-      <p class="muted">Não é só mais um curso de maquiagem. Aqui você recebe acompanhamento, estratégias práticas e acesso vitalício ao conteúdo.</p>
-      <div class="benefits">
-        <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
-        <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
-        <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
-        <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
-      </div>
+      <p class="muted" style="text-align:center;">Não é só mais um curso de maquiagem. Aqui você recebe acompanhamento, estratégias práticas e acesso vitalício ao conteúdo.</p>
+
+      <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
+      <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
+      <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
+      <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
     </div>
   </section>
 
-  <!-- Oferta -->
+  <!-- OFERTA -->
   <section id="oferta">
     <div class="wrap">
       <h2 class="section-title">Escolha seu plano e comece hoje</h2>
@@ -149,9 +253,9 @@
         <div class="card">
           <span class="ribbon">Mais acessado</span>
           <h3>Curso Completo</h3>
-          <p class="price">R$ 27,00</p>
+          <p class="price">R$ 27,00 </p>
           <p class="period">Acesso vitalício</p>
-          <ul>
+          <ul class="list">
             <li>+40 videoaulas em HD</li>
             <li>Certificado profissional</li>
             <li>Bônus de automaquiagem</li>
@@ -161,9 +265,9 @@
         </div>
         <div class="card">
           <h3>Curso + Bônus</h3>
-          <p class="price">R$ 19,90</p>
+          <p class="price">R$ 19,90 </p>
           <p class="period">Acesso vitalício</p>
-          <ul>
+          <ul class="list">
             <li>Tudo do Curso Completo</li>
             <li>Certificado profissional</li>
           </ul>
@@ -173,15 +277,19 @@
     </div>
   </section>
 
-  <!-- Depoimentos -->
+  <!-- DEPOIMENTOS -->
   <section class="dark">
     <div class="wrap">
       <h2 class="section-title">O que nossas alunas dizem</h2>
       <div class="carousel">
-        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp">
-        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp">
-        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp">
-        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/55.webp">
+        <div class="track">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/55.webp">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/66.webp">
+          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/77.webp">
+        </div>
       </div>
     </div>
   </section>
@@ -190,13 +298,22 @@
   <section>
     <div class="wrap">
       <h2 class="section-title">Perguntas Frequentes</h2>
-      <details><summary>O curso é realmente online?</summary><p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p></details>
-      <details><summary>Vou receber certificado?</summary><p>Claro! Ao concluir o curso você recebe um certificado profissional.</p></details>
-      <details><summary>Tenho suporte se tiver dúvidas?</summary><p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p></details>
+      <details>
+        <summary>O curso é realmente online?</summary>
+        <p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p>
+      </details>
+      <details>
+        <summary>Vou receber certificado?</summary>
+        <p>Claro! Ao concluir o curso você recebe um certificado profissional.</p>
+      </details>
+      <details>
+        <summary>Tenho suporte se tiver dúvidas?</summary>
+        <p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p>
+      </details>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <p>© 2025 Curso Make Pro — Todos os direitos reservados</p>
@@ -204,9 +321,10 @@
     </div>
   </footer>
 
-  <!-- CTA fixo -->
+  <!-- BOTÃO FIXO MOBILE -->
   <div class="sticky-cta">
     <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir minha vaga agora</a>
   </div>
+
 </body>
 </html>
