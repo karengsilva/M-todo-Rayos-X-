@@ -1,149 +1,83 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Curso de Maquiagem Profissional — Torne-se a maquiadora mais disputada da sua cidade</title>
-  <meta name="description" content="Aprenda maquiagem profissional do zero ao avançado. Técnicas modernas, certificados, bônus exclusivos e treinamento prático para transformar sua paixão em uma profissão lucrativa." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fff7f9;--bg-2:#fff;--ink:#1f2937;--muted:#6b7280;--rose-500:#f43f5e;--rose-700:#be123c;--brand:#f43f5e;--brand-2:#fb7185;--success:#10b981;--radius:22px;--shadow:0 6px 18px rgba(244,63,94,.15);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;}
-    img{max-width:100%;display:block;height:auto}
-    a{text-decoration:none}
-    .wrap{width:min(1100px,94%);margin-inline:auto}
-
-    .topbar{position:sticky;top:0;z-index:50;background:#fff7fbcc;backdrop-filter:blur(10px);border-bottom:1px solid #ffe4ec}
-    .topbar .inner{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
-    .brand{display:flex;align-items:center;gap:.5rem;font-weight:800}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem 1rem;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;box-shadow:var(--shadow);font-size:.95rem}
-    .btn:hover{filter:brightness(.97)}
-    .btn.ghost{background:#fff;border:1px solid #ffd0da;color:var(--rose-700);box-shadow:none}
-
-    .hero{padding:2rem 0}
-    .hero-grid{display:grid;gap:1.5rem}
-    @media(min-width:900px){.hero-grid{grid-template-columns:1fr 1fr;align-items:center;gap:2rem}}
-    .eyebrow{display:inline-block;font-size:.8rem;color:var(--rose-700);background:#fff;border:1px solid #ffd0da;padding:.3rem .7rem;border-radius:999px;margin-bottom:.7rem}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(1.8rem,4vw,3rem);line-height:1.2;margin-bottom:.8rem}
-    .lead{font-size:1rem;color:#374151;margin-bottom:1rem}
-    .vsl{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:16/9}
-    .vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .bullet{display:flex;align-items:flex-start;gap:.6rem;margin:.4rem 0;font-size:.95rem}
-    .bullet i{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #ffd0da;color:var(--rose-700);font-size:.8rem;font-weight:700}
-    .trust{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.7rem;font-size:.85rem;color:var(--muted)}
-
-    section{padding:2.5rem 0}
-    .section-title{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,2.5vw,2.2rem);margin-bottom:1rem}
-    .muted{color:var(--muted)}
-
-    .pricing{display:grid;gap:1rem;margin-top:1rem}
-    @media(min-width:800px){.pricing{grid-template-columns:1fr 1fr;}}
-    .card{background:#fff;border:1px solid #ffe1ea;border-radius:18px;padding:1.2rem;box-shadow:var(--shadow)}
-    .price{font-size:1.9rem;font-weight:800;color:var(--rose-700);margin:.5rem 0}
-    .period{font-size:.9rem;color:var(--muted)}
-    .list{list-style:none;margin-top:.7rem}
-    .list li{margin:.35rem 0;display:flex;align-items:flex-start;gap:.4rem;font-size:.9rem}
-    .list li::before{content:"✓";color:var(--success);font-weight:700}
-    .ribbon{display:inline-block;background:linear-gradient(135deg,var(--rose-500),var(--rose-700));color:#fff;padding:.3rem .6rem;border-radius:999px;font-size:.75rem;margin-bottom:.5rem}
-
-    .carousel{position:relative;margin-top:1rem}
-    .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.5rem}
-    .track::-webkit-scrollbar{height:6px}
-    .track::-webkit-scrollbar-thumb{background:#ffd0da;border-radius:999px}
-    .item{flex:0 0 75%;scroll-snap-align:center;background:#fff;border:1px solid #ffe1ea;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
-    @media(min-width:800px){.item{flex:0 0 30%}}
-
-    details{border:1px solid #ffe1ea;border-radius:12px;padding:.8rem 1rem;background:#fff}
-    details+details{margin-top:.6rem}
-    summary{cursor:pointer;font-weight:600;font-size:.95rem}
-
-    .dark{background:#1f2937;color:#f9fafb}
-    .dark .muted{color:#cbd5e1}
-    .testimonial{border-radius:12px;overflow:hidden;border:1px solid #374151}
-
-    footer{padding:1.2rem 0;color:var(--muted);border-top:1px solid #ffe1ea;font-size:.85rem;text-align:center}
-
-    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;background:#fff;padding:.6rem;border-top:1px solid #ffd0da;box-shadow:var(--shadow)}
-    .sticky-cta .btn{flex:1;text-align:center}
-    @media(min-width:900px){.sticky-cta{display:none}}
-  </style>
-</head>
 <body>
-  <div class="topbar">
+  <!-- Topbar -->
+  <header class="topbar">
     <div class="wrap inner">
-      <div class="brand">💄 Maquiagem Lucrativa</div>
-      <nav class="hide-mobile">
-        <a class="btn ghost" href="#precos">Planos</a>
-        <a class="btn" href="#comprar">Quero Agora</a>
-      </nav>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Oferta única • acesso imediato</span>
-        <h1>Pare de ficar invisível! É hora de ser <span style="color:var(--rose-700)">a maquiadora mais desejada e bem paga</span> da sua região</h1>
-        <p class="lead">Com esse curso explosivo você vai dominar:</p>
-        <div class="bullet"><i>✔</i> Do zero ao avançado → mesmo que nunca tenha maquiado antes.</div>
-        <div class="bullet"><i>✔</i> Mais de 150 aulas práticas, diretas, sem enrolação.</div>
-        <div class="bullet"><i>✔</i> Certificados Profissionais que elevam seu valor e autoridade.</div>
-        <div class="trust">
-          <span>🔒 Compra 100% segura</span>
-          <span>🔥 Últimas vagas com bônus</span>
-        </div>
-        <p style="margin-top:1rem"><a class="btn" href="#comprar">Quero entrar agora</a></p>
-      </div>
-      <div><div class="vsl"><iframe src="https://player.vimeo.com/video/500157822" allowfullscreen></iframe></div></div>
+      <div class="brand">✨ Curso Make Pro</div>
+      <a href="#oferta" class="btn">Quero me inscrever</a>
     </div>
   </header>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Curso Online Exclusivo</span>
+        <h1>Torne-se a maquiadora <br>mais disputada da sua cidade</h1>
+        <p class="lead">Aprenda técnicas modernas de maquiagem, mesmo que esteja começando do zero, e conquiste clientes fiéis todos os dias.</p>
+        <div class="bullet"><i>✓</i><span>Passo a passo do básico ao avançado</span></div>
+        <div class="bullet"><i>✓</i><span>Certificado profissional incluso</span></div>
+        <div class="bullet"><i>✓</i><span>Bônus exclusivos e suporte direto</span></div>
+        <a href="#oferta" class="btn" style="margin-top:1rem;">Garantir minha vaga</a>
+        <div class="trust"><span>🔒 Pagamento 100% seguro</span><span>📜 Certificado válido</span></div>
+      </div>
+      <div>
+        <div class="vsl">
+          <iframe src="https://drive.google.com/file/d/1XhONSlB2DEVdza6jLAkVt-8q-3xWI07b/view?usp=sharing" title="Apresentação do Curso" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
   <section>
     <div class="wrap">
-      <h2 class="section-title center">Domine técnicas que vendem</h2>
-      <div class="carousel">
-        <div class="track">
-          <div class="item"><img src="https://via.placeholder.com/400x300?text=Make+Noiva" alt="Maquiagem Noiva"></div>
-          <div class="item"><img src="https://via.placeholder.com/400x300?text=Make+Social" alt="Maquiagem Social"></div>
-          <div class="item"><img src="https://via.placeholder.com/400x300?text=Make+Fotografia" alt="Maquiagem Fotografia"></div>
-        </div>
-      </div>
+      <h2 class="section-title">Por que este curso é diferente?</h2>
+      <p class="muted">Não é só mais um curso de maquiagem. Aqui você recebe acompanhamento, estratégias práticas e acesso vitalício ao conteúdo.</p>
+      <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
+      <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
+      <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
+      <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
     </div>
   </section>
 
-  <section id="precos">
+  <!-- Oferta -->
+  <section id="oferta">
     <div class="wrap">
-      <h2 class="section-title center">Garanta seu acesso hoje</h2>
+      <h2 class="section-title">Escolha seu plano e comece hoje</h2>
       <div class="pricing">
         <div class="card">
-          <span class="ribbon">Promoção Relâmpago</span>
-          <h3>Plano Acesso Total</h3>
-          <div class="price">R$19,90</div>
-          <div class="period">ou 2x de R$10,40</div>
+          <span class="ribbon">Mais acessado</span>
+          <h3>Curso Completo</h3>
+          <p class="price">R$ 27,00 </p>
+          <p class="period">Acesso vitalício</p>
           <ul class="list">
-            <li>Mais de 150 aulas práticas</li>
-            <li>20 Certificados Profissionais</li>
-            <li>Acesso vitalício</li>
-            <li>Bônus exclusivos (Design de Sobrancelhas, AutoMaquiagem, Extensão de Cílios)</li>
+            <li>+40 videoaulas em HD</li>
+            <li>Certificado profissional</li>
+            <li>Bônus de automaquiagem</li>
+            <li>Grupo exclusivo de alunas</li>
           </ul>
-          <p><a class="btn" id="comprar" href="#">Liberar meu acesso</a></p>
+          <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn" style="margin-top:1rem;">Garantir acesso</a>
+        </div>
+        <div class="card">
+          <h3>Curso + Bônus </h3>
+          <p class="price">R$ 19,90 </p>
+          <p class="period">Acesso vitalício</p>
+          <ul class="list">
+            <li>Tudo do Curso Completo</li>
+            <li>Certificado profissional</li>
+          </ul>
+          <a href="https://go.perfectpay.com.br/PPU38CPSQ61" class="btn" style="margin-top:1rem;">Quero com mentoria</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Depoimentos -->
   <section class="dark">
     <div class="wrap">
-      <h2 class="section-title center">Elas já transformaram suas vidas</h2>
+      <h2 class="section-title">O que nossas alunas dizem</h2>
       <div class="carousel">
         <div class="track">
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/depoimentos11.png"></div>
-          <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/depoimento22.png"></div>
           <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp"></div>
           <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp"></div>
           <div class="item testimonial"><img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp"></div>
@@ -155,14 +89,35 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <details>
+        <summary>O curso é realmente online?</summary>
+        <p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p>
+      </details>
+      <details>
+        <summary>Vou receber certificado?</summary>
+        <p>Claro! Ao concluir o curso você recebe um certificado profissional.</p>
+      </details>
+      <details>
+        <summary>Tenho suporte se tiver dúvidas?</summary>
+        <p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© <span id="year"></span> Maquiagem Lucrativa. Todos os direitos reservados.</p>
+    <div class="wrap">
+      <p>© 2025 Curso Make Pro — Todos os direitos reservados</p>
+      <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p>
+    </div>
   </footer>
 
-  <div class="sticky-cta"><a class="btn" href="#comprar">Quero ser uma maquiadora de sucesso</a></div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Botão fixo Mobile -->
+  <div class="sticky-cta">
+    <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir minha vaga agora</a>
+  </div>
 </body>
-</html>
