@@ -1,330 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Maquiagem Profissional</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo V2 Página D6D - Alunos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&family=Montserrat:wght@900&family=Poppins:wght@400;500;800&family=Sora:wght@900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color:#fff; color:#000; line-height:1.5; overflow-x:hidden; }
 
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        h2,h3,h4,h5,h6 { margin-bottom:15px; }
+        section { padding:60px 20px; transition: all 0.5s ease; }
+        .center { text-align:center; }
+        .red-text { color:#FF0000; transition: all 0.3s ease; }
+        .green-btn {
+            background-color:#0B9C00; color:#fff; font-family:'Montserrat', sans-serif;
+            font-size:23px; font-weight:900; padding:15px 30px; border:none;
+            border-radius:8px; cursor:pointer; text-decoration:none;
+            display:inline-block; margin-top:20px; transition:all 0.3s ease;
+        }
+        .green-btn:hover { background-color:#08a100; transform:scale(1.05); }
 
-  <style>
-    /* ===== RESET ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fff;
-    }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; }
+        .red-border-box {
+            border:5px dotted #FF0000; border-radius:15px; padding:30px; margin:30px 0;
+            transition: all 0.5s ease;
+        }
+        .red-border-box:hover { transform:scale(1.02); }
 
-    /* ===== GLOBAL ===== */
-    .wrap {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1, h2, h3 {
-      font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    h1 { font-size: 2.5rem; }
-    h2.section-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #a72cc4;
-    }
-    p.lead {
-      font-size: 1.2rem;
-      margin-bottom: 1.2rem;
-    }
+        img { max-width:100%; height:auto; border-radius:26px; transition: transform 0.4s ease; }
+        img:hover { transform:scale(1.03); }
 
-    /* ===== HERO ===== */
-    section.hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, #ff6ec4, #7873f5);
-      color: white;
-    }
-    section.hero h1 { font-size: 2.8rem; }
-    section.hero .eyebrow {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #ffe6f9;
-    }
-    .bullet {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-      margin: 0.4rem 0;
-    }
-    .bullet i {
-      color: #00ffae;
-      font-weight: bold;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      font-weight: 600;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #ff6ec4, #7873f5);
-      color: #fff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-    }
-    .trust {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
+        /* Depoimentos */
+        .testimonial-images { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:30px 0; }
+        .testimonial-images img { width:22%; border-radius:15px; transition: all 0.3s ease; }
+        .testimonial-images img:hover { transform:scale(1.05); }
 
-    /* ===== VSL ===== */
-    .vsl {
-      margin-top: 2rem;
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-    .vsl iframe {
-      position: absolute;
-      top:0; left:0;
-      width: 100%;
-      height: 100%;
-      border:0;
-    }
+        /* Responsividade */
+        @media(max-width:768px){
+            .green-btn { font-size:18px; padding:12px 20px; }
+            h2 { font-size:28px; }
+            .red-text { font-size:25px; }
+            section { padding:40px 15px; }
+            .testimonial-images img { width:70%; margin:0 auto; }
+        }
 
-    /* ===== PRICING ===== */
-    .pricing {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      position: relative;
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { color: #a72cc4; }
-    .card .price {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #ff6ec4;
-    }
-    .ribbon {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background: #ff6ec4;
-      color: white;
-      padding: 0.3rem 1rem;
-      font-size: 0.8rem;
-      border-radius: 10px;
-    }
+        /* Animação de fade-in ao scroll */
+        .fade-in { opacity:0; transform:translateY(40px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
 
-    /* ===== CAROUSEL ===== */
-    .carousel {
-      overflow: hidden;
-      position: relative;
-    }
-    .carousel .track {
-      display: flex;
-      animation: scroll 15s linear infinite;
-      gap: 1rem;
-    }
-    .carousel img {
-      border-radius: 15px;
-      width: 300px;
-      height: auto;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+        /* Background seções */
+        .section-black { background-color:#000; color:#fff; }
+        .section-gray { background-color:#f7f7f7; }
 
-    /* ===== FAQ ===== */
-    details {
-      margin: 1rem 0;
-      padding: 1rem;
-      background: #f9f9f9;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-    details summary {
-      font-weight: 600;
-      color: #a72cc4;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #fafafa;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    footer a { color: #a72cc4; }
-
-    /* ===== STICKY CTA (mobile) ===== */
-    .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .sticky-cta { display: block; }
-    }
-  </style>
+    </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Curso Online Exclusivo</span>
-      <h1>Torne-se a maquiadora <br>mais disputada da sua cidade</h1>
-      <p class="lead">Aprenda técnicas modernas de maquiagem, mesmo que esteja começando do zero, e conquiste clientes fiéis todos os dias.</p>
+    <!-- Resumo Inicial -->
+    <section class="center fade-in">
+        <p class="red-text" style="font-size:35px;font-weight:800;">Não leu tudo? Vou Resumir para Você...</p>
+        <p style="font-size:20px;font-weight:500;">
+            Se a ideia de criar, vender artes esportivas e chegar aos R$5mil por mês é uma meta boa para você…<br>
+            Eu realmente acredito que adquirir o <b>“DBDB”</b> <b>é uma decisão inteligente.</b><br>
+            <u>Não posso garantir que você vai alcançar esse resultado.</u><br>
+            Mas garanto que você terá acesso ao exato caminho que eu e meus alunos seguimos para alcançar essa primeira meta.
+        </p>
+    </section>
 
-      <div class="bullet"><i>✓</i><span>Passo a passo do básico ao avançado</span></div>
-      <div class="bullet"><i>✓</i><span>Certificado profissional incluso</span></div>
-      <div class="bullet"><i>✓</i><span>Bônus exclusivos e suporte direto</span></div>
+    <!-- Proposta -->
+    <section class="red-border-box center fade-in">
+        <h2 style="font-size:20px;font-weight:500;"><u>A proposta é simples e clara</u>: Estou apresentando uma oportunidade de gerar renda expressiva como designer criando artes esportivas.</h2>
+    </section>
 
-      <a href="#oferta" class="btn">Garantir minha vaga</a>
+    <!-- Modelo e Benefícios -->
+    <section class="fade-in">
+        <p style="font-size:20px;font-weight:500;">
+            Estou falando de um modelo que você pode <u>simplesmente replicar</u> e criar quantas artes quiser e aumentar exponencialmente suas vendas.<br>
+            Estou falando de algo que servirá como o seu guia oficial para criar artes esportivas e que seja rentável no curto prazo.<br>
+            Felizmente, adquirindo seu acesso hoje você garante 85% de desconto e + 3 bônus exclusivos.<br>
+            <b>Pagamento único, sem pegadinhas e 7 dias de garantia.</b>
+        </p>
 
-      <div class="trust">
-        <span>🔒 Pagamento 100% seguro</span>
-        <span>📜 Certificado válido</span>
-      </div>
+        <p class="red-text" style="font-size:35px;font-weight:800;">Legal... mas se é tão bom, por que está tão barato?</p>
 
-      <div class="vsl">
-        <iframe src="https://www.youtube.com/embed/fyXgN8qH3eQ" title="Apresentação do Curso" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
+        <img src="https://pivadesigner.com/wp-content/uploads/2023/04/desconfiado.jpg" alt="Desconfiado" class="fade-in">
 
-  <!-- BENEFÍCIOS -->
-  <section>
-    <div class="wrap">
-      <h2 class="section-title">Por que este curso é diferente?</h2>
-      <p class="muted" style="text-align:center;">Não é só mais um curso de maquiagem. Aqui você recebe acompanhamento, estratégias práticas e acesso vitalício ao conteúdo.</p>
+        <p style="font-size:20px;font-weight:500;">
+            Ahhh, eu sei que isso passou pela sua cabeça.<br>
+            Se você prestar atenção, o valor de R$10,00 e R$37,00 não parece ser um valor aleatório para cobrar em um produto (e de fato não é).<br>
+            <b>Razão número 01:</b> O valor não se torna um obstáculo para ninguém.<br>
+            <b>Razão número 02:</b> Proteção contra curiosos. Mesmo que o investimento seja baixo, o simples fato de cobrar já afasta curiosos em busca de “soluções gratuitas” na internet.<br>
+            E quem gosta do produto, fica com vontade comprar outros treinamentos no futuro (essa é a “jogada”).<br>
+            <u>Sem pegadinhas, sem letras miúdas ou nada do tipo.</u>
+        </p>
+    </section>
 
-      <div class="bullet"><i>✓</i><span>Metodologia simplificada e prática</span></div>
-      <div class="bullet"><i>✓</i><span>Treinamento para redes sociais</span></div>
-      <div class="bullet"><i>✓</i><span>Mais de 40 videoaulas exclusivas</span></div>
-      <div class="bullet"><i>✓</i><span>Grupo VIP de alunas para networking</span></div>
-    </div>
-  </section>
+    <!-- Acesso -->
+    <section class="fade-in">
+        <p class="red-text" style="font-size:35px;font-weight:800;">Em quanto tempo eu irei receber meu acesso?</p>
+        <p style="font-size:20px;font-weight:500;">
+            Logo após a aprovação do seu pagamento, <i><b>você irá receber no seu e-mail</b></i> de compra os seus dados de acesso.<br>
+            <u>O produto está em uma Área de Membros premium</u> para você ter uma experiência melhor com o produto.
+        </p>
+    </section>
 
-  <!-- OFERTA -->
-  <section id="oferta">
-    <div class="wrap">
-      <h2 class="section-title">Escolha seu plano e comece hoje</h2>
-      <div class="pricing">
-        <div class="card">
-          <span class="ribbon">Mais acessado</span>
-          <h3>Curso Completo</h3>
-          <p class="price">R$ 27,00 </p>
-          <p class="period">Acesso vitalício</p>
-          <ul class="list">
-            <li>+40 videoaulas em HD</li>
-            <li>Certificado profissional</li>
-            <li>Bônus de automaquiagem</li>
-            <li>Grupo exclusivo de alunas</li>
-          </ul>
-          <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir acesso</a>
+    <!-- Garantia -->
+    <section class="section-gray fade-in" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px;">
+        <div style="flex:1; min-width:250px; text-align:center;">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/garantia-7-dias-1.png" alt="Garantia 7 dias">
         </div>
-        <div class="card">
-          <h3>Curso + Bônus</h3>
-          <p class="price">R$ 19,90 </p>
-          <p class="period">Acesso vitalício</p>
-          <ul class="list">
-            <li>Tudo do Curso Completo</li>
-            <li>Certificado profissional</li>
-          </ul>
-          <a href="https://go.perfectpay.com.br/PPU38CPSQ61" class="btn">Quero com mentoria</a>
+        <div style="flex:2; min-width:250px;">
+            <h2 class="red-text" style="font-size:33px;">VOCÊ NÃO TEM NADA A PERDER!</h2>
+            <p style="font-size:23px;">O PRODUTO TEM GARANTIA INCONDICIONAL DE 7 DIAS</p>
+            <p style="font-size:18px;">
+                Você pode assistir todas as aulas, ter acesso a todas estratégias que eu e meus alunos usamos.<br>
+                Se por <b>qualquer motivo</b> você não ficar satisfeito ou não se adaptar, basta entrar em contato com a minha equipe dentro do prazo de <b>7 dias e solicitar o reembolso</b> do valor investido.<br>
+                <b>Você receberá de volta cada centavo que pagou.</b><br>
+                Eu estou <b>tirando todo o risco das suas mãos</b> e colocando nas minhas.<br>
+                Faça sua inscrição agora mesmo e veja com seus próprios olhos.
+            </p>
+            <a href="#oferta" class="green-btn">OK, ME CONVENCEU!</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- DEPOIMENTOS -->
-  <section class="dark">
-    <div class="wrap">
-      <h2 class="section-title">O que nossas alunas dizem</h2>
-      <div class="carousel">
-        <div class="track">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/11.webp">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/22.webp">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/33.webp">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/55.webp">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/66.webp">
-          <img src="https://raw.githubusercontent.com/karengsilva/site-artes/refs/heads/main/77.webp">
+    <!-- Depoimentos -->
+    <section class="section-black fade-in">
+        <h2 style="font-family:'Sora', sans-serif; font-size:32px; font-weight:900;">AINDA ESTÁ NA DÚVIDA? VEJA O QUE DIZEM...</h2>
+        <div class="testimonial-images">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 1">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 2">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 3">
+            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 4">
         </div>
-      </div>
-    </div>
-  </section>
+        <a href="#oferta" class="green-btn">OK, ME CONVENCEU!</a>
+    </section>
 
-  <!-- FAQ -->
-  <section>
-    <div class="wrap">
-      <h2 class="section-title">Perguntas Frequentes</h2>
-      <details>
-        <summary>O curso é realmente online?</summary>
-        <p>Sim, todo o conteúdo é 100% online e você pode acessar quando quiser.</p>
-      </details>
-      <details>
-        <summary>Vou receber certificado?</summary>
-        <p>Claro! Ao concluir o curso você recebe um certificado profissional.</p>
-      </details>
-      <details>
-        <summary>Tenho suporte se tiver dúvidas?</summary>
-        <p>Sim, você terá acesso ao suporte e também ao grupo exclusivo de alunas.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <p>© 2025 Curso Make Pro — Todos os direitos reservados</p>
-      <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p>
-    </div>
-  </footer>
-
-  <!-- BOTÃO FIXO MOBILE -->
-  <div class="sticky-cta">
-    <a href="https://go.perfectpay.com.br/PPU38CPSQ6A" class="btn">Garantir minha vaga agora</a>
-  </div>
-
+    <script>
+        // Script de animação fade-in ao scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+    </script>
 </body>
 </html>
