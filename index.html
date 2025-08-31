@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Método Rayos X - Curso de Maquillaje</title>
+  <title>Método Rayos X - Maquillaje Profesional</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@500;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,16 +11,17 @@
     :root{
       --bg-dark:#000;
       --bg-light:#fff;
-      --brand:#0B9C00;
-      --brand-2:#FF0035;
-      --accent:#FBFF00;
+      --brand:#FF3FA0;
+      --brand-2:#FF66B2;
+      --accent:#FFB6E6;
       --danger:#DA0303;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif;background:#fff;color:#000;}
+    html,body{height:100%}
+    body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:#fff;color:#000;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 
-    /* util */
-    .container{max-width: 1000px;margin:0 auto;padding:0 16px}
+    /* Layout utility */
+    .container{max-width:1000px;margin:0 auto;padding:0 16px}
     .center{text-align:center}
     .mt-0{margin-top:0}
     .mt-10{margin-top:10px}
@@ -29,195 +30,189 @@
     .mb-10{margin-bottom:10px}
     .mb-20{margin-bottom:20px}
     .btn{display:inline-block;padding:14px 26px;border:none;border-radius:14px;font-weight:900;letter-spacing:.5px;text-decoration:none;cursor:pointer;transition:.2s}
-    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 0 100px -24px #00FF7E}
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 0 100px -24px var(--accent)}
     .btn-primary:hover{filter:brightness(.92)}
     .badge{display:inline-block;padding:2px 10px;border-radius:6px;font-weight:700}
 
     /* HERO */
-    .hero{position:relative;min-height:640px;display:flex;align-items:flex-start;justify-content:center;padding:20px 0 60px;background: #000 url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-DESK.jpg') center/cover no-repeat;}
-    .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:200px;background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 60%, #fff 100%);}
+    .hero{position:relative;min-height:560px;display:flex;align-items:flex-start;justify-content:center;padding:28px 0 60px;background:#000 url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-DESK.jpg') center/cover no-repeat;}
+    .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:200px;background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.45) 60%, #fff 100%);}
     .hero .inner{position:relative;z-index:2;width:100%}
-    .hero h1{color:#fff;font-weight:800;font-size: clamp(32px,4.5vw,60px);line-height:1.1;margin:20px 0}
-    .hero p{color:#fff;font-size: clamp(15px,2.2vw,22px);margin:8px auto 16px;max-width:760px}
-    .hero .video{margin:18px auto 0;max-width:900px;aspect-ratio:16/9;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4)}
-    .hero .video iframe{width:100%;height:100%;border:0}
+    .hero h1{color:#fff;font-weight:800;font-size: clamp(32px,4.5vw,60px);line-height:1.05;margin:12px 0}
+    .hero p{color:#fff;font-size: clamp(15px,2.2vw,20px);margin:8px auto 16px;max-width:760px}
+    .hero .video{margin:18px auto 0;max-width:920px;aspect-ratio:16/9;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+    .hero .video iframe{width:100%;height:100%;border:0;display:block}
 
     /* PRICE STRIP */
     .strip{background:#fff;padding:14px 0 22px}
-    .strip h2{font-size: clamp(22px,4vw,50px);color:var(--danger);text-align:center;margin:14px 0 0}
-    .strip h3{font-size: clamp(18px,3vw,30px);font-weight:600;text-align:center;margin:-6px 0 -10px}
-    .strip .big{font-size: clamp(42px,7vw,80px);font-weight:900;color:var(--brand);text-align:center;margin:0 0 2px}
-    .strip .cta{display:flex;justify-content:center}
+    .strip h2{font-size: clamp(20px,3.4vw,40px);color:var(--danger);text-align:center;margin:8px 0}
+    .strip h3{font-size: clamp(16px,2.6vw,24px);font-weight:600;text-align:center;margin:-6px 0 -6px}
+    .strip .big{font-size: clamp(36px,6vw,64px);font-weight:900;color:var(--brand);text-align:center;margin:2px 0}
+    .strip .cta{display:flex;justify-content:center;margin-top:12px}
 
     /* CONTENT BLOCKS */
-    .section{padding:22px 0}
-    .section h2{font-size: clamp(24px,3.6vw,35px);font-weight:800;margin:18px 0 6px}
-    .section h2.red{color:#FF0000}
+    .section{padding:28px 0}
+    .section h2{font-size: clamp(22px,3.2vw,34px);font-weight:800;margin:14px 0 6px}
+    .section h2.red{color:var(--brand)}
     .section h2.black{color:#000}
-    .section p{font-size: clamp(16px,2.6vw,20px);font-weight:500;line-height:1.35}
+    .section p{font-size: clamp(15px,2.2vw,18px);font-weight:500;line-height:1.45}
+    .bullets{margin:12px 0;padding:0;list-style:none}
+    .bullets li{display:flex;gap:12px;align-items:flex-start;margin:10px 0;font-size: clamp(16px,2.1vw,20px);font-weight:700}
+    .bullets li .dot{font-size: 1.2em;color:var(--brand);line-height:1}
 
-    .bullets{margin:8px 0;padding:0;list-style:none}
-    .bullets li{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-size: clamp(18px,2.4vw,25px);font-weight:700}
-    .bullets li .dot{font-size: 1.2em;color:#0E9600;line-height:1}
-
-    /* Simple carousel */
-    .carousel{display:flex;gap:8px;max-width:100%;overflow:auto;padding:4px;scroll-snap-type:x mandatory}
-    .carousel img{height:340px;max-width:100%;object-fit:cover;border-radius:12px;scroll-snap-align:start}
+    /* carousel */
+    .carousel{display:flex;gap:8px;max-width:100%;overflow:auto;padding:6px;scroll-snap-type:x mandatory}
+    .carousel img{height:260px;max-width:100%;object-fit:cover;border-radius:12px;scroll-snap-align:start}
 
     /* Bonus cards */
-    .bonus{background:linear-gradient(297deg,#006A0F, #000);border-radius:15px;padding:0;margin:16px 0;display:grid;grid-template-columns: 1fr 1.3fr;gap:0;color:#fff;overflow:hidden}
+    .bonus{background:linear-gradient(297deg,var(--brand-2), var(--brand));border-radius:15px;padding:0;margin:16px 0;display:grid;grid-template-columns:1fr 1.3fr;gap:0;color:#fff;overflow:hidden}
     .bonus .img{background:#030303;display:flex;justify-content:center;align-items:center;padding:20px}
     .bonus .img img{width:80%;border-radius:15px}
-    .bonus .txt{padding:24px 24px}
-    .bonus .eyebrow{color:#FBFF00;text-transform:uppercase;letter-spacing:8px;font-size:14px;margin:0 0 4px}
-    .bonus h3{margin:0 0 6px;font-size:24px}
-    .bonus .value{margin:0 0 8px;font-size:20px}
-    @media (max-width: 900px){
-      .bonus{grid-template-columns:1fr}
-      .bonus .img img{width:100%}
-    }
+    .bonus .txt{padding:20px 22px}
+    .bonus .eyebrow{color:#FBFF00;text-transform:uppercase;letter-spacing:6px;font-size:13px;margin:0 0 6px}
+    .bonus h3{margin:0 0 6px;font-size:22px}
+    .bonus .value{margin:0 0 8px;font-size:18px}
+    @media (max-width:900px){ .bonus{grid-template-columns:1fr} .carousel img{height:180px} .hero{min-height:520px} }
 
     /* OFFER AREA */
-    .offers{background:#000;color:#fff;padding:24px 0 50px}
-    .offers h2{font-family:Inter, Poppins, sans-serif;font-weight:900;font-size:clamp(28px,4.4vw,48px);text-align:center;margin:12px 0}
-    .tables{display:flex;gap:24px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
-    .card{--radius:31px;background:#111;border-radius:var(--radius);overflow:hidden;max-width:560px;flex:1 1 380px}
-    .card header{padding:26px;background:#00B114;color:#000}
+    .offers{background:#0b0b0b;color:#fff;padding:28px 0 50px}
+    .offers h2{font-family:Inter, Poppins, sans-serif;font-weight:900;font-size:clamp(24px,4vw,44px);text-align:center;margin:12px 0}
+    .tables{display:flex;gap:20px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
+    .card{--radius:22px;background:#111;border-radius:var(--radius);overflow:hidden;max-width:560px;flex:1 1 340px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+    .card header{padding:18px;background:var(--brand);color:#fff}
     .card header .ribbon{background:var(--accent);color:#000;font-weight:bold;display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:8px}
-    .card header h3{font-family:Inter, sans-serif;font-size:43px;line-height:1;margin:6px 0 0}
-    .price{color:#03BD00;font-family:Inter, sans-serif;font-size:53px;font-weight:900;margin:8px 0}
-    .period{color:#000;font-family:Inter, sans-serif;line-height:2.2;margin:-8px 0 4px}
-    .card .body{background:#fff;color:#141414;padding:18px 18px 12px}
+    .card header h3{font-family:Inter, sans-serif;font-size:30px;line-height:1;margin:6px 0 0}
+    .price{color:var(--brand);font-family:Inter, sans-serif;font-size:40px;font-weight:900;margin:8px 0}
+    .period{color:#fff;font-family:Inter, sans-serif;line-height:1.6;margin:-6px 0 8px}
+    .card .body{background:#fff;color:#141414;padding:16px 16px 12px}
     .features{list-style:none;margin:0;padding:0}
-    .features li{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-family:Inter, sans-serif;font-size:17px}
-    .features .ok{color:#00B114}
-    .features .no{color:#FF0000}
-    .card .cta{padding:18px;background:#fff}
-    .card .cta a{display:block;text-align:center;background:#00C941;color:#fff;padding:16px;border-radius:16px;font-weight:500;text-decoration:none}
+    .features li{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-family:Inter, sans-serif;font-size:15px}
+    .features .ok{color:var(--brand)}
+    .features .no{color:#FF0035}
+    .card .cta{padding:14px;background:#fff}
+    .card .cta a{display:block;text-align:center;background:var(--brand);color:#fff;padding:12px;border-radius:12px;font-weight:600;text-decoration:none}
     .card .cta a:hover{background:#000}
-    .card .foot{padding:0 30px 20px;background:#fff;color:#000}
+    .card .foot{padding:10px 18px 20px;background:#fff;color:#000;font-size:14px}
 
-    /* MEGA card override */
     .card.mega header{background:#FF0035;color:#fff}
     .card.mega .price{color:#fff}
     .card.mega .body{background:#181818;color:#fff}
     .card.mega .features{color:#fff}
-    .card.mega .features .ok{color:#FF0035}
-    .card.mega .cta{background:#181818}
-    .card.mega .cta a{background:#FF0035}
-    .card.mega .cta a:hover{background:#000}
+    .card.mega .features .ok{color:var(--brand)}
 
-    /* footer info */
-    .note{font-size:14px;color:#333}
-    a{color:inherit}
+    /* footer */
+    footer{background:#111;color:#fff;padding:40px 16px;font-family:Poppins, sans-serif}
+    footer .foot-inner{max-width:1000px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+    footer h3{color:var(--brand);margin:0 0 10px}
+    footer p, footer a, footer small{color:#ddd}
+    footer .legal{max-width:480px}
+    .socials a{margin-right:8px;color:var(--brand);}
+    .small{font-size:13px;color:#bdbdbd;margin-top:12px}
+    @media (max-width:720px){
+      .foot-inner{flex-direction:column;gap:18px}
+      .carousel img{height:160px}
+    }
   </style>
 </head>
 <body>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Hero - Curso de Maquillaje">
     <div class="inner container center">
-      <h1>DOMINA EL ARTE DEL <span style="color:#2EF01F">MAQUILLAJE</span> Y TRANSFORMA TU ESTILO 💄</h1>
-      <p>Aprende a maquillarte para cualquier ocasión y siéntete segura y confiada todos los días.</p>
-      <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/b1zo0WGb25Q?rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h1>DOMINA EL ARTE DEL <span style="color:var(--brand)">MAQUILLAJE</span> Y TRANSFORMA TU ESTILO 💄</h1>
+      <p>Aprende a maquillar para bodas, sesiones fotográficas, eventos y el día a día con técnicas profesionales y fáciles de seguir.</p>
+      <div class="video" role="region" aria-label="Vídeo de presentación">
+        <!-- YouTube embed (seu vídeo) -->
+        <iframe src="https://www.youtube.com/embed/b1zo0WGb25Q" title="Video de presentación" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
   <!-- PRICE STRIP + CTA -->
-  <section class="strip">
-    <div class="container">
-      <h2 class="mt-0">DE <s> $57,00</s></h2>
+  <section class="strip" aria-label="Oferta">
+    <div class="container center">
+      <h2 class="mt-0">DE <s>$57,00</s></h2>
       <h3>POR SOLO</h3>
-      <div class="big"> $10</div>
+      <div class="big">$10</div>
       <div class="cta"><a class="btn btn-primary" href="#oferta">🔥 ¡ASEGURA TU ACCESO AHORA! 🔥</a></div>
     </div>
   </section>
 
-  <!-- QUESTIONS & BENEFITS -->
-  <section class="section container center">
-    <h2 class="red">Cómo crear maquillajes increíbles para bodas, fiestas, fotos y uso diario</h2>
-    <h2 class="black">Cómo resaltar tus rasgos y potenciar tu belleza natural</h2>
-    <h2 class="red">Domina iluminación, contorno y técnicas avanzadas de piel</h2>
-    <h2 class="black">Ojos impactantes, labios perfectos y cejas impecables</h2>
-    <p>Estas son las preguntas que más recibo de mujeres cada día…<br>
-    Y si te digo que puedes aprender técnicas comprobadas sin horas de ensayo y obtener resultados profesionales de inmediato?<br>
-    Solo necesitas seguir mi método validado y práctico.<br><br>
-    Imagina si…</p>
+  <!-- CONTENT QUESTIONS -->
+  <section class="section container center" aria-label="Contenido del curso">
+    <h2 class="red">Cómo crear maquillajes increíbles para bodas, fiestas, fotos y el día a día</h2>
+    <h2 class="black">Cómo resaltar tus rasgos y tu belleza natural</h2>
+    <h2 class="red">Cómo dominar iluminación, contorno y técnicas avanzadas de piel</h2>
+    <h2 class="black">Cómo lograr ojos marcantes, labios perfectos y cejas impecables</h2>
 
-    <ul class="bullets">
-      <li><span class="dot">●</span> Pudieras maquillarte como una profesional para cualquier ocasión</li>
-      <li><span class="dot">●</span> Tuvieras acceso a técnicas que realmente funcionan</li>
-      <li><span class="dot">●</span> Pudieras impresionar a tus amigos, familiares y clientes con tu talento</li>
+    <p>Estas son las preguntas que más me hacen todos los días... Y si te digo que puedes aprender técnicas comprobadas sin pasar horas intentando sola, con resultados rápidos y profesionales? Solo necesitas seguir una estructura validada.</p>
+
+    <ul class="bullets" aria-label="beneficios">
+      <li><span class="dot">●</span>Puedes maquillarte como una profesional para cualquier ocasión</li>
+      <li><span class="dot">●</span>Acceso a técnicas que realmente funcionan</li>
+      <li><span class="dot">●</span>Impresiona a amigos, familiares e incluso clientes</li>
     </ul>
 
-    <p>💡 Esto puede transformar tu autoestima y tu forma de presentarte al mundo.<br>
-    <u>Puedes estar segura que sí.</u></p>
+    <p>💡 Esto transformará tu autoestima y la forma en que te presentas al mundo. <u>Seguro que sí.</u></p>
 
     <h2 class="black">¡Conoce el Curso de Auto Maquillaje Profesional!</h2>
-    <p class="center">Aprenderás desde lo BÁSICO hasta lo AVANZADO, con técnicas que realmente marcan la diferencia y te hacen sentir segura.👇🏻</p>
+    <p>Aquí aprenderás del BÁSICO al AVANZADO, técnicas prácticas y aplicables desde el primer día.</p>
 
-    <!-- carousel de imágenes -->
-    <div class="carousel" aria-label="galería de maquillajes">
-      <img src="https://via.placeholder.com/400x340?text=Maquillaje+1" alt="Maquillaje 1" loading="lazy">
-      <img src="https://via.placeholder.com/400x340?text=Maquillaje+2" alt="Maquillaje 2" loading="lazy">
-      <img src="https://via.placeholder.com/400x340?text=Maquillaje+3" alt="Maquillaje 3" loading="lazy">
-      <img src="https://via.placeholder.com/400x340?text=Maquillaje+4" alt="Maquillaje 4" loading="lazy">
-      <img src="https://via.placeholder.com/400x340?text=Maquillaje+5" alt="Maquillaje 5" loading="lazy">
+    <!-- gallery carousel (simple scroll) -->
+    <div class="carousel" aria-label="Galería de looks">
+      <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/1.webp" alt="Look 1" loading="lazy">
+      <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/2.webp" alt="Look 2" loading="lazy">
+      <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/3.webp" alt="Look 3" loading="lazy">
+      <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/4.webp" alt="Look 4" loading="lazy">
+      <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/5.webp" alt="Look 5" loading="lazy">
     </div>
 
-    <p>Preparación de piel, iluminación, maquillaje fotográfico, social y para fiestas <br>
-    Esfumado clásico, cut crease, delineados y labios perfectos.<br>
-    Blindaje avanzado y técnicas de cejas y contorno.<br>
-    Todo explicado de forma simple y práctica para aplicar inmediatamente.</p>
+    <p style="max-width:900px;margin:16px auto 0">Preparación de piel, iluminación, maquillaje fotográfico, social y para eventos. Smooky clásico, cut crease, delineados, labios sensuales, técnicas avanzadas de cejas y contorno — todo explicado de forma clara y práctica.</p>
 
-    <p class="center" style="font-weight:700">¿QUÉ RECIBIRÁS?</p>
-    <ul class="features">
-      <li><span class="ok">✔</span> <b>Paso a paso detallado para maquillarte sola con perfección</b></li>
-      <li><span class="ok">✔</span> <b>Bono exclusivos</b></li>
-      <li><span class="ok">✔</span> <b>Técnicas de maquillaje que realmente realzan tu rostro</b> </li>
+    <p class="center" style="font-weight:700;margin-top:14px">¿QUÉ RECIBIRÁS?</p>
+    <ul class="features" style="max-width:760px;margin:6px auto 0;padding:0">
+      <li><span class="ok">✔</span>&nbsp;<strong>Guía paso a paso para maquillarte con técnica profesional</strong></li>
+      <li><span class="ok">✔</span>&nbsp;<strong>Bono exclusivos</strong></li>
+      <li><span class="ok">✔</span>&nbsp;<strong>Técnicas que realmente resaltan tu rostro</strong></li>
     </ul>
   </section>
 
-  <!-- BONUS 1 & 2 -->
-  <section class="container">
-    <h2 class="center" style="text-transform:uppercase">
-      <span class="badge" style="background:red;color:#fff">02 Bonos Increíbles</span> <br>Recibe bonos adicionales junto al curso.
-    </h2>
+  <!-- BONUSES -->
+  <section class="container" aria-label="Bonos">
+    <h2 class="center" style="text-transform:uppercase"><span class="badge" style="background:#ff3b7a;color:#fff">02 Bonos Increíbles</span><br>además del curso</h2>
 
-    <article class="bonus">
+    <article class="bonus" aria-label="Bono 1">
       <div class="img">
-        <img src="https://via.placeholder.com/200x200?text=Bono+1" alt="Diseño de Cejas">
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/es4.webp" alt="Diseño de Cejas">
       </div>
       <div class="txt">
         <p class="eyebrow">Bono 1</p>
         <h3>Curso de Diseño de Cejas</h3>
-        <p class="value">VALOR: <span style="color:#FF0000"><s>$27,00</s></span></p>
-        <p>Aprende a hacer cejas perfectas en ti misma, con certificado incluido. <strong>(Contenido premium)</strong>.</p>
+        <p class="value">VALOR: <span style="color:#FF0000"><s>R$27,00</s></span></p>
+        <p>Aprende a diseñar cejas perfectas paso a paso. Certificado incluido.</p>
       </div>
     </article>
 
-    <article class="bonus">
+    <article class="bonus" aria-label="Bono 2">
       <div class="img">
-        <img src="https://via.placeholder.com/200x200?text=Bono+2" alt="Curso Avanzado de Auto Maquillaje">
+        <img src="https://raw.githubusercontent.com/karengsilva/site-artes/main/es2.webp" alt="Auto Maquillaje Avanzado">
       </div>
       <div class="txt">
         <p class="eyebrow">Bono 2</p>
-        <h3>Curso Avanzado de Auto Maquillaje</h3>
+        <h3>Auto Maquillaje Avanzado</h3>
         <p class="value">VALOR: <span style="color:#FF0000"><s>IMENSURABLE</s></span></p>
-        <p>Aprende trucos profesionales, desde lo básico hasta avanzado y destaca en cualquier ocasión.</p>
+        <p>Trucos y técnicas profesionales desde el básico al avanzado para destacar en cualquier ocasión.</p>
       </div>
     </article>
   </section>
 
   <!-- OFFERS -->
-  <section class="offers" id="oferta">
+  <section class="offers" id="oferta" aria-label="Ofertas">
     <div class="container">
       <h2>ELIGE LA MEJOR OFERTA PARA TI</h2>
 
-      <div class="tables">
-        <!-- Plan Básico -->
-        <article class="card">
+      <div class="tables" role="list">
+        <!-- Basic Plan -->
+        <article class="card" role="listitem" aria-label="Plan básico">
           <header>
             <span class="ribbon">COSTO BENEFICIO</span>
             <h3>Plan<br>Básico</h3>
@@ -226,17 +221,17 @@
             <div class="price">$ 10,00</div>
             <div class="period">Pago Único</div>
             <ul class="features">
-              <li><span class="ok">✔</span> <b>Curso completo de Auto Maquillaje</b></li>
-              <li><span class="ok">✔</span> Garantía 7 Días</li>
-              <li><span class="ok">✔</span> 1 Año de Acceso</li>
+              <li><span class="ok">✔</span>&nbsp;Curso completo de Auto Maquillaje</li>
+              <li><span class="ok">✔</span>&nbsp;Garantía 7 Días</li>
+              <li><span class="ok">✔</span>&nbsp;1 Año de Acceso</li>
             </ul>
           </div>
-          <div class="cta"><a href="https://pay.hotmart.com/L101311162O?checkoutMode=10">LIBERAR PLAN BÁSICO</a></div>
-          <div class="foot"><p class="note"><b>⚠️ ATENCIÓN:</b> Oferta por tiempo LIMITADO!</p></div>
+          <div class="cta"><a href="https://pay.hotmart.com/L101311162O?checkoutMode=10" rel="noopener noreferrer" target="_blank">LIBERAR PLAN BÁSICO</a></div>
+          <div class="foot"><p class="note"><strong>⚠️ ATENCIÓN:</strong> Oferta por tiempo LIMITADO.</p></div>
         </article>
 
-        <!-- Mega Oferta -->
-        <article class="card mega">
+        <!-- Mega Offer -->
+        <article class="card mega" role="listitem" aria-label="Mega oferta">
           <header>
             <h3>Mega<br>Oferta</h3>
           </header>
@@ -245,20 +240,49 @@
             <div class="period">Hasta 12x en tarjeta</div>
             <ul class="features">
               <li style="width:100%;text-align:center">
-                <img src="https://via.placeholder.com/400x200?text=Mega+Oferta" alt="Mega Oferta" width="400" style="max-width:100%;border-radius:12px">
+                <img src="https://pivadesigner.com/wp-content/uploads/2023/05/MEGA-DBDB-1.png" alt="Mega Pack" width="360" style="max-width:100%;border-radius:12px">
               </li>
-              <li><span class="ok">✔</span> Curso completo de Auto Maquillaje</li>
-              <li><span class="ok">✔</span> Acceso Vitalicio</li>
-              <li><span class="ok">✔</span> Garantía de 30 días - Si no estás satisfecha, solicita reembolso</li>
-              <li><span class="ok">✔</span> Bono de diseño de cejas</li>
-              <li><span class="ok">✔</span> Curso Avanzado de Auto Maquillaje</li>
+              <li><span class="ok">✔</span>&nbsp;Curso completo de Auto Maquillaje</li>
+              <li><span class="ok">✔</span>&nbsp;Acceso Vitalicio</li>
+              <li><span class="ok">✔</span>&nbsp;<strong>Garantía 30 días</strong> — si no quedas satisfecha, solicita reembolso.</li>
+              <li><span class="ok">✔</span>&nbsp;Bono Diseño de Cejas + Auto Maquillaje Avanzado</li>
             </ul>
           </div>
-          <div class="cta"><a href="https://pivadesigner.com/upgrade-dbdb">LIBERAR MEGA OFERTA</a></div>
-          <div class="foot"><p class="note"><b>APROVECHA AHORA:</b> Condiciones especiales por tiempo limitado.</p></div>
+          <div class="cta"><a href="https://pivadesigner.com/upgrade-dbdb" rel="noopener noreferrer" target="_blank">LIBERAR MEGA OFERTA</a></div>
+          <div class="foot"><p class="note"><strong>APROVECHA:</strong> condiciones especiales por tiempo limitado.</p></div>
         </article>
       </div>
     </div>
   </section>
+
+  <!-- FOOTER (padrão seguro) -->
+  <footer role="contentinfo">
+    <div class="foot-inner">
+      <div class="legal">
+        <h3>Método Rayos X</h3>
+        <p>Curso online de Auto Maquillaje Profesional. Acceso inmediato tras la compra. Formación práctica, con certificados y soporte.</p>
+        <p class="small">COPYRIGHT 2024 - Maquillaje Lucrativo - Curso de Maquillaje Profesional © TODOS LOS DERECHOS RESERVADOS</p>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p>Email: <a href="mailto:suporte@seudominio.com">suporte@seudominio.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5511999999999" rel="noopener noreferrer" target="_blank">+55 (11) 99999-9999</a></p>
+        <div class="socials" style="margin-top:8px">
+          <a href="#" aria-label="Instagram">Instagram</a> • <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Política</h4>
+        <p><a href="#" onclick="alert('Link de política - substitua pelo URL real');return false">Política de Privacidad</a></p>
+        <p><a href="#" onclick="alert('Link de términos - substitua pelo URL real');return false">Términos y Condiciones</a></p>
+      </div>
+    </div>
+
+    <div style="max-width:1000px;margin:18px auto 0;padding:0 16px">
+      <small style="color:#9a9a9a;display:block">Ninguna información en este sitio debe interpretarse como promesa de ingresos. Resultados varían según dedicación y otros factores.</small>
+    </div>
+  </footer>
 </body>
 </html>
