@@ -1,107 +1,288 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artes Esportivas - Estratégia R$5mil/mês</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Montserrat:wght@900&display=swap" rel="stylesheet">
-<style>
-  body, html { margin:0; padding:0; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-  section { width: 100%; overflow: hidden; }
-  .hero { 
-    background: url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-DESK.jpg') top center no-repeat;
-    background-size: cover;
-    min-height: 653px; 
-    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; 
-    color:#fff;
-    padding:20px 0 7px 0;
-  }
-  @media(max-width:768px){
-    .hero { 
-      background:url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-MOBILE.jpg') center center no-repeat;
-      background-size:cover; min-height:372px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DBDB – Designer Bom de Bola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@500;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-dark:#000;
+      --bg-light:#fff;
+      --brand:#0B9C00;
+      --brand-2:#FF0035;
+      --accent:#FBFF00;
+      --danger:#DA0303;
     }
-    .hero h1 { font-size:31px; }
-    .hero h2 { font-size:16px; }
-  }
-  .hero h1 { font-size:60px; font-weight:800; margin:20px 50px 0 50px; }
-  .hero h2 { font-size:22px; font-weight:400; line-height:1.4; margin:0 120px 9px 120px; }
-  .video-container { margin-top:20px; max-width: 800px; width:90%; }
-  .video-container iframe { width:100%; height:450px; border:none; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif;background:#fff;color:#000;}
 
-  .offer { background:#fff; text-align:center; padding:20px 0; }
-  .offer s { color:#DA0303; font-size:50px; font-weight:bold; display:block; margin-top:14px; margin-bottom:1px; }
-  .offer .por { color:#000; font-size:30px; font-weight:600; margin:-10px 0 -15px 0; }
-  .offer .price { color:#0B9C00; font-size:80px; font-weight:900; margin:0 0 1px 0; }
-  .offer button { 
-    background:#0B9C00; color:#fff; font-family:'Montserrat', sans-serif; font-weight:900; 
-    font-size:23px; padding:10px 40px; margin-top:10px; border:none; cursor:pointer; 
-    box-shadow:0 0 100px -24px #00FF7E;
-  }
-  @media(max-width:768px){
-    .offer s { font-size:27px; margin:0; }
-    .offer .por { font-size:20px; margin:-21px; }
-    .offer .price { font-size:91px; margin:-15px 0 0 0; }
-    .offer button { font-size:21px; margin:0 15px; }
-  }
+    /* util */
+    .container{max-width: 1000px;margin:0 auto;padding:0 16px}
+    .center{text-align:center}
+    .mt-0{margin-top:0}
+    .mt-10{margin-top:10px}
+    .mt-20{margin-top:20px}
+    .mb-0{margin-bottom:0}
+    .mb-10{margin-bottom:10px}
+    .mb-20{margin-bottom:20px}
+    .btn{display:inline-block;padding:14px 26px;border:none;border-radius:14px;font-weight:900;letter-spacing:.5px;text-decoration:none;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 0 100px -24px #00FF7E}
+    .btn-primary:hover{filter:brightness(.92)}
+    .badge{display:inline-block;padding:2px 10px;border-radius:6px;font-weight:700}
 
-  .questions { max-width:958px; margin:0 auto; background:#fff; padding:20px; text-align:center; }
-  .questions h3 { font-size:35px; font-weight:800; margin:20px 0 1px 0; line-height:1; }
-  .questions p { font-size:20px; font-weight:500; line-height:1.2; margin:10px 0; text-align:left; }
-  .questions ul { list-style:none; padding:0; margin:20px 0; text-align:left; }
-  .questions li { font-size:25px; font-weight:700; margin-bottom:15px; display:flex; align-items:center; color:#0E9600; }
-  .questions li i { margin-right:10px; font-size:33px; }
-  @media(max-width:768px){
-    .questions h3 { font-size:25px; }
-    .questions p { font-size:18px; }
-    .questions li { font-size:20px; }
-    .questions li i { font-size:21px; }
-  }
+    /* HERO */
+    .hero{position:relative;min-height:640px;display:flex;align-items:flex-start;justify-content:center;padding:20px 0 60px;background: #000 url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-DESK.jpg') center/cover no-repeat;}
+    .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:200px;background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 60%, #fff 100%);}
+    .hero .inner{position:relative;z-index:2;width:100%}
+    .hero h1{color:#fff;font-weight:800;font-size: clamp(32px,4.5vw,60px);line-height:1.1;margin:20px 0}
+    .hero p{color:#fff;font-size: clamp(15px,2.2vw,22px);margin:8px auto 16px;max-width:760px}
+    .hero .video{margin:18px auto 0;max-width:900px;aspect-ratio:16/9;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+    .hero .video iframe{width:100%;height:100%;border:0}
 
-  /* Divisores e seções adicionais podem ser adicionadas aqui conforme JSON */
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    /* PRICE STRIP */
+    .strip{background:#fff;padding:14px 0 22px}
+    .strip h2{font-size: clamp(22px,4vw,50px);color:var(--danger);text-align:center;margin:14px 0 0}
+    .strip h3{font-size: clamp(18px,3vw,30px);font-weight:600;text-align:center;margin:-6px 0 -10px}
+    .strip .big{font-size: clamp(42px,7vw,80px);font-weight:900;color:var(--brand);text-align:center;margin:0 0 2px}
+    .strip .cta{display:flex;justify-content:center}
+
+    /* CONTENT BLOCKS */
+    .section{padding:22px 0}
+    .section h2{font-size: clamp(24px,3.6vw,35px);font-weight:800;margin:18px 0 6px}
+    .section h2.red{color:#FF0000}
+    .section h2.black{color:#000}
+    .section p{font-size: clamp(16px,2.6vw,20px);font-weight:500;line-height:1.35}
+
+    .bullets{margin:8px 0;padding:0;list-style:none}
+    .bullets li{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-size: clamp(18px,2.4vw,25px);font-weight:700}
+    .bullets li .dot{font-size: 1.2em;color:#0E9600;line-height:1}
+
+    /* Simple carousel */
+    .carousel{display:flex;gap:8px;max-width:100%;overflow:auto;padding:4px;scroll-snap-type:x mandatory}
+    .carousel img{height:340px;max-width:100%;object-fit:cover;border-radius:12px;scroll-snap-align:start}
+
+    /* Bonus cards */
+    .bonus{background:linear-gradient(297deg,#006A0F, #000);border-radius:15px;padding:0;margin:16px 0;display:grid;grid-template-columns: 1fr 1.3fr;gap:0;color:#fff;overflow:hidden}
+    .bonus .img{background:#030303;display:flex;justify-content:center;align-items:center;padding:20px}
+    .bonus .img img{width:80%;border-radius:15px}
+    .bonus .txt{padding:24px 24px}
+    .bonus .eyebrow{color:#FBFF00;text-transform:uppercase;letter-spacing:8px;font-size:14px;margin:0 0 4px}
+    .bonus h3{margin:0 0 6px;font-size:24px}
+    .bonus .value{margin:0 0 8px;font-size:20px}
+    @media (max-width: 900px){
+      .bonus{grid-template-columns:1fr}
+      .bonus .img img{width:100%}
+    }
+
+    /* OFFER AREA */
+    .offers{background:#000;color:#fff;padding:24px 0 50px}
+    .offers h2{font-family:Inter, Poppins, sans-serif;font-weight:900;font-size:clamp(28px,4.4vw,48px);text-align:center;margin:12px 0}
+    .tables{display:flex;gap:24px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
+    .card{--radius:31px;background:#111;border-radius:var(--radius);overflow:hidden;max-width:560px;flex:1 1 380px}
+    .card header{padding:26px;background:#00B114;color:#000}
+    .card header .ribbon{background:var(--accent);color:#000;font-weight:bold;display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:8px}
+    .card header h3{font-family:Inter, sans-serif;font-size:43px;line-height:1;margin:6px 0 0}
+    .price{color:#03BD00;font-family:Inter, sans-serif;font-size:53px;font-weight:900;margin:8px 0}
+    .period{color:#000;font-family:Inter, sans-serif;line-height:2.2;margin:-8px 0 4px}
+    .card .body{background:#fff;color:#141414;padding:18px 18px 12px}
+    .features{list-style:none;margin:0;padding:0}
+    .features li{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-family:Inter, sans-serif;font-size:17px}
+    .features .ok{color:#00B114}
+    .features .no{color:#FF0000}
+    .card .cta{padding:18px;background:#fff}
+    .card .cta a{display:block;text-align:center;background:#00C941;color:#fff;padding:16px;border-radius:16px;font-weight:500;text-decoration:none}
+    .card .cta a:hover{background:#000}
+    .card .foot{padding:0 30px 20px;background:#fff;color:#000}
+
+    /* MEGA card override */
+    .card.mega header{background:#FF0035;color:#fff}
+    .card.mega .price{color:#fff}
+    .card.mega .body{background:#181818;color:#fff}
+    .card.mega .features{color:#fff}
+    .card.mega .features .ok{color:#FF0035}
+    .card.mega .cta{background:#181818}
+    .card.mega .cta a{background:#FF0035}
+    .card.mega .cta a:hover{background:#000}
+
+    /* footer info */
+    .note{font-size:14px;color:#333}
+    a{color:inherit}
+  </style>
 </head>
 <body>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="inner container center">
+      <h1>A ESTRATÉGIA PARA FATURAR MAIS DE <span style="color:#2EF01F">R$5MIL POR MÊS</span> COM ARTES ESPORTIVAS</h1>
+      <p>Você terá acesso imediato a estratégia de Design que eu utilizo para criar e vender artes esportivas.</p>
+      <div class="video">
+        <iframe src="https://player.vimeo.com/video/500157822?h=6e8a9b1f8b&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-<!-- Hero / Início -->
-<section class="hero">
-  <h1>A ESTRATÉGIA PARA FATURAR MAIS DE <span style="color:#2EF01F">R$5MIL POR MÊS</span> COM ARTES ESPORTIVAS</h1>
-  <h2>Você terá acesso imediato a estratégia de Design que eu utilizo para criar e vender artes esportivas.</h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/XHOmBV4js_E" allowfullscreen></iframe>
-  </div>
-</section>
+  <!-- STRIP PRICE + CTA -->
+  <section class="strip">
+    <div class="container">
+      <h2 class="mt-0">DE <s>R$97,00</s></h2>
+      <h3>POR APENAS</h3>
+      <div class="big">R$10</div>
+      <div class="cta"><a class="btn btn-primary" href="#oferta">COMPRAR AGORA!</a></div>
+    </div>
+  </section>
 
-<!-- Oferta -->
-<section class="offer" id="oferta">
-  <s>DE R$97,00</s>
-  <div class="por">POR APENAS</div>
-  <div class="price">R$10</div>
-  <button>COMPRAR AGORA!</button>
-</section>
+  <!-- CONTENT QUESTIONS -->
+  <section class="section container center">
+    <h2 class="red">Como criar backgrounds incríveis em poucos passos?</h2>
+    <h2 class="black">Como viver e ser lucrativo no design?</h2>
+    <h2 class="red">Como criar uma iluminação realista no Photoshop?</h2>
+    <h2 class="black">Como abordar e vender essas artes esportivas para jogadores?</h2>
+    <p>Essas são algumas das perguntas mais frequentes que eu recebo todos os dias no meu Instagram…<br>
+    E se eu te falar que é possível usar minha estrutura e processo criativo para criar rapidamente artes incríveis capazes de te gerar mais de R$5mil todo mês?<br>
+    E o melhor, <u>você não precisa</u> assistir infinitas horas de conteúdo, comprar cursos caros, nem torrar o seu dinheiro com testes e mais testes ATÉ conseguir vender.<br>
+    Tudo o que você precisa fazer é <u>seguir</u> <u>estruturas validadas.</u><br>
+    É claro que o sucesso de um designer envolve vários fatores: Sua experiência, sua dedicação, suas referências...<br>
+    Mas sem dúvida nenhuma, dominar o processo criativo <b>é um dos mais importantes.</b><br>
+    Mas deixa eu te fazer algumas perguntas…</p>
 
-<!-- Perguntas e Conteúdo -->
-<section class="questions">
-  <h3>Como criar backgrounds incriveis em poucos passos?</h3>
-  <h3>Como viver e ser lucrativo no design?</h3>
-  <h3>Como criar uma iluminação realista no Photoshop?</h3>
-  <h3>Como abordar e vender essas artes esportivas para jogadores?</h3>
+    <ul class="bullets">
+      <li><span class="dot">●</span> O que você acha de aprender como criar e vender suas artes esportivas para jogadores do futebol brasileiro e mundial?</li>
+      <li><span class="dot">●</span> O que você acha de MODELAR os meus templates de artes esportivas?</li>
+      <li><span class="dot">●</span> E se você soubesse como é o meu processo criativo nos MÍNIMOS detalhes para usar as melhores técnicas que mais tem dado resultados pro meu bolso?</li>
+    </ul>
 
-  <p>Essas são algumas das perguntas mais frequentes que eu recebo todos os dias no meu Instagram…</p>
-  <p>E se eu te falar que é possível usar minha estrutura e processo criativo para criar rapidamente artes incríveis capazes de te gerar mais de R$5mil todo mês?</p>
-  <p>E o melhor, <u>você não precisa</u> assistir infinitas horas de conteúdo, comprar cursos caros, nem torrar o seu dinheiro com testes e mais testes ATÉ conseguir vender.</p>
-  <p>Tudo o que você precisa fazer é <u>seguir</u> <u>estruturas validadas.</u></p>
-  <p>É claro que o sucesso de um designer envolve vários fatores: Sua experiência, sua dedicação, suas referências...</p>
-  <p>Mas sem dúvida nenhuma, dominar o processo criativo <b>é um dos mais importantes.</b></p>
-  <p>Mas deixa eu te fazer algumas perguntas…</p>
+    <p>Isso tornaria sua vida mais fácil e aumentaria suas chances de ter sucesso como designer?<br>
+    <u>Pode ter certeza que sim.</u></p>
 
-  <ul>
-    <li><i class="fas fa-bullseye"></i>O que você acha de aprender como criar e vender suas artes esportivas para jogadores do futebol brasileiro e mundial?</li>
-    <li><i class="fas fa-bullseye"></i>O que você acha de MODELAR os meus templates de artes esportivas?</li>
-    <li><i class="fas fa-bullseye"></i>E se você soubesse como é o meu processo criativo nos MÍNIMOS detalhes para usar as melhores técnicas que mais tem dado resultados pro meu bolso?</li>
-  </ul>
-</section>
+    <h2 class="black">Foi por isso que eu criei o DBDB!</h2>
+    <p class="center">Confira alguma das artes que você vai aprender a criar do zero no curso 👇🏻</p>
 
+    <!-- simple carousel (arraste no mobile) -->
+    <div class="carousel" aria-label="galeria de artes do curso">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/CR7-SIM.webp" alt="Arte CR7" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/CAVANI.webp" alt="Arte Cavani" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/DEPAY.webp" alt="Arte Depay" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2021/05/QUADRADO-MAGICO.png" alt="Quadrado Mágico" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MESSI-1.webp" alt="Arte Messi" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/wp-1beb77f85b20c0f00985540ecf439da9.webp" alt="Arte" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Arte-Pogba.webp" alt="Arte Pogba" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/FUTURISTIC.webp" alt="Arte Futuristic" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MANE-1.webp" alt="Arte Mané" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/MESSI.webp" alt="Arte Messi 2" loading="lazy">
+      <img src="https://pivadesigner.com/wp-content/uploads/2023/01/wp-067735f4d28d25d95a76c12876027767.webp" alt="Arte" loading="lazy">
+    </div>
+
+    <p>Esse é exatamente o MESMO processo que eu e os meus alunos utilizamos para criar e vender artes esportivas todos os dias!<br>
+    São detalhes que <b>apesar de ser muito poderoso</b> é <u>extremamente SIMPLES</u> de ser implementado…<br>
+    …e você poderá fazer isso sem precisar de horas e horas de estudo.<br>
+    (Se você se dedicar seriamente, você conseguirá <u>seguir todas as etapas em poucos dias</u>).<br>
+    Nós iremos cobrir os principais detalhes sobre cada processo criativo e de venda e entender <b>como ter lucros expressivos como designer.</b></p>
+
+    <p class="center" style="font-weight:700">O QUE VOCÊ IRÁ RECEBER?</p>
+    <ul class="features">
+      <li><span class="ok">✔</span> <b>Como Criar e Vender suas artes do ZERO:</b> Chega de Confusão! Você terá acesso ao passo a passo detalhado para criar e vender suas artes esportivas do absoluto ZERO. Perfeito se você for iniciante.</li>
+      <li><span class="ok">✔</span> <b>Estrutura Vencedora e de BAIXO RISCO:</b> Modelos de prospecção de clientes que uso e trazem muito lucro — perfeito para começar com o pé direito.</li>
+      <li><span class="ok">✔</span> <b>PSD's de OURO:</b> Acesso a todos os arquivos .PSD das aulas para estudar e modelar as artes.</li>
+      <li><span class="ok">✔</span> <b>Etapas passo-a-passo:</b> Todo o processo mastigado para você seguir sem dor de cabeça.</li>
+    </ul>
+  </section>
+
+  <!-- BONUS 1 -->
+  <section class="container">
+    <h2 class="center" style="text-transform:uppercase"> <span class="badge" style="background:red;color:#fff">02 Bônus Incríveis</span> <br>você ganha alguns bônus extras além do curso.</h2>
+
+    <article class="bonus">
+      <div class="img">
+        <img src="https://pivadesigner.com/wp-content/uploads/2023/05/BONUS-PACK-DO-DESIGNER-ESPORTIVO-1.png" alt="Pack do Designer Esportivo">
+      </div>
+      <div class="txt">
+        <p class="eyebrow">Bônus 1</p>
+        <h3>PACK DO DESIGNER ESPORTIVO</h3>
+        <p class="value">VALOR: <span style="color:#FF0000"><s>R$ 27,00</s></span></p>
+        <p>Tenha acesso ao PSD das minhas melhores artes esportivas e estude por dentro do arquivo original <strong>(Estou liberando o ouro)</strong>.</p>
+      </div>
+    </article>
+
+    <!-- BONUS 2 -->
+    <article class="bonus">
+      <div class="img">
+        <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Bonus-Certificado-2-1.webp" alt="Certificado de Especialista">
+      </div>
+      <div class="txt">
+        <p class="eyebrow">Bônus 2</p>
+        <h3>CERTIFICADO DE ESPECIALISTA</h3>
+        <p class="value">VALOR: <span style="color:#FF0000"><s>IMENSURÁVEL</s></span></p>
+        <p>Após concluir <b>80% do treinamento</b>, você receberá um <b>Certificado de Especialista</b> em artes esportivas. O Certificado é gerado automaticamente com seus dados ao finalizar 80% do treinamento!</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers" id="oferta">
+    <div class="container">
+      <h2>ESCOLHA A MELHOR OFERTA PARA VOCÊ</h2>
+
+      <div class="tables">
+        <!-- Basic Plan -->
+        <article class="card">
+          <header>
+            <span class="ribbon">CUSTO BENEFÍCIO</span>
+            <h3>Plano<br>Básico</h3>
+          </header>
+          <div class="body">
+            <div class="price">R$ 10,00</div>
+            <div class="period">Pagamento Único</div>
+            <ul class="features">
+              <li><span class="ok">✔</span> <b>Curso Designer Bom de Bola</b></li>
+              <li><span class="ok">✔</span> Garantia 7 Dias</li>
+              <li><span class="ok">✔</span> 1 Ano de Acesso</li>
+              <li><span class="no">✖</span> <b>PORTFÓLIO EDITÁVEL:</b> É só importar suas artes e subir pro Behance</li>
+              <li><span class="no">✖</span> <b>PACK DO DESIGNER ESPORTIVO</b></li>
+              <li><span class="no">✖</span> <b>CURSO TURBO DESIGNER</b></li>
+              <li><span class="no">✖</span> <b>CURSO CARROSSEL PERFEITO</b></li>
+              <li><span class="no">✖</span> <b>CURSO DESIGNER DO FUTURO</b></li>
+              <li><span class="no">✖</span> <b>PSD das Aulas</b></li>
+              <li><span class="no">✖</span> <b>DOC DESIGN</b></li>
+              <li><span class="no">✖</span> <b>6 MESES CLOSE FRIENDS</b></li>
+            </ul>
+          </div>
+          <div class="cta"><a href="https://pivadesigner.com/upgrade-dbdb">LIBERAR PLANO BÁSICO</a></div>
+          <div class="foot"><p class="note"><b>ATENÇÃO:</b> Temos uma oferta ainda mais <u>VANTAJOSA</u> para você! Veja logo abaixo 👇🏻</p></div>
+        </article>
+
+        <!-- Mega Offer -->
+        <article class="card mega">
+          <header>
+            <h3>Mega<br>Oferta</h3>
+          </header>
+          <div class="body">
+            <div class="price">R$ 37,00</div>
+            <div class="period">Em até 12x no cartão</div>
+            <ul class="features">
+              <li style="width:100%;text-align:center">
+                <img src="https://pivadesigner.com/wp-content/uploads/2023/05/MEGA-DBDB-1.png" alt="Mega DBDB" width="400" style="max-width:100%;border-radius:12px">
+              </li>
+              <li><span class="ok">✔</span> <b>Curso Designer Bom de Bola</b></li>
+              <li><span class="ok">✔</span> Acesso Vitalício</li>
+              <li><span class="ok">✔</span> <b>GARANTIA DE 30 DIAS:</b> Teste e, se não curtir, peça estorno total via WhatsApp.</li>
+              <li><span class="ok">✔</span> <b>PORTFÓLIO EDITÁVEL</b></li>
+              <li><span class="ok">✔</span> <b>PACK DO DESIGNER ESPORTIVO</b></li>
+              <li><span class="ok">✔</span> <b>CURSO TURBO DESIGNER</b></li>
+              <li><span class="ok">✔</span> <b>CURSO CARROSSEL PERFEITO</b></li>
+              <li><span class="ok">✔</span> <b>CURSO DESIGNER DO FUTURO</b></li>
+              <li><span class="ok">✔</span> <b>PSD das Aulas</b></li>
+              <li><span class="ok">✔</span> <b>DOC DESIGN</b></li>
+              <li><span class="ok">✔</span> <b>6 MESES CLOSE FRIENDS</b></li>
+            </ul>
+          </div>
+          <div class="cta"><a href="https://pivadesigner.com/upgrade-dbdb">LIBERAR MEGA OFERTA</a></div>
+          <div class="foot"><p class="note"><b>APROVEITE AGORA:</b> condições especiais por tempo limitado.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
