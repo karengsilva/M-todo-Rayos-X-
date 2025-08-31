@@ -1,154 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo V2 Página D6D - Alunos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&family=Montserrat:wght@900&family=Poppins:wght@400;500;800&family=Sora:wght@900&display=swap" rel="stylesheet">
-    <style>
-        /* Reset básico */
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color:#fff; color:#000; line-height:1.5; overflow-x:hidden; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artes Esportivas - Estratégia R$5mil/mês</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<style>
+  body, html { margin:0; padding:0; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+  section { width: 100%; overflow: hidden; }
+  .hero { 
+    background: url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-DESK.jpg') top center no-repeat;
+    background-size: cover;
+    min-height: 653px; 
+    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; 
+    color:#fff;
+    padding:20px 0 7px 0;
+  }
+  @media(max-width:768px){
+    .hero { 
+      background:url('https://pivadesigner.com/wp-content/uploads/2023/04/BG-MOBILE.jpg') center center no-repeat;
+      background-size:cover; min-height:372px;
+    }
+    .hero h1 { font-size:31px; }
+    .hero h2 { font-size:16px; }
+  }
+  .hero h1 { font-size:60px; font-weight:800; margin:20px 50px 0 50px; }
+  .hero h2 { font-size:22px; font-weight:400; line-height:1.4; margin:0 120px 9px 120px; }
+  .video-container { margin-top:20px; max-width: 800px; width:90%; }
+  .video-container iframe { width:100%; height:450px; border:none; }
 
-        h2,h3,h4,h5,h6 { margin-bottom:15px; }
-        section { padding:60px 20px; transition: all 0.5s ease; }
-        .center { text-align:center; }
-        .red-text { color:#FF0000; transition: all 0.3s ease; }
-        .green-btn {
-            background-color:#0B9C00; color:#fff; font-family:'Montserrat', sans-serif;
-            font-size:23px; font-weight:900; padding:15px 30px; border:none;
-            border-radius:8px; cursor:pointer; text-decoration:none;
-            display:inline-block; margin-top:20px; transition:all 0.3s ease;
-        }
-        .green-btn:hover { background-color:#08a100; transform:scale(1.05); }
+  .offer { background:#fff; text-align:center; padding:20px 0; }
+  .offer s { color:#DA0303; font-size:50px; font-weight:bold; display:block; margin-top:14px; margin-bottom:1px; }
+  .offer .por { color:#000; font-size:30px; font-weight:600; margin:-10px 0 -15px 0; }
+  .offer .price { color:#0B9C00; font-size:80px; font-weight:900; margin:0 0 1px 0; }
+  .offer button { 
+    background:#0B9C00; color:#fff; font-family:'Montserrat', sans-serif; font-weight:900; 
+    font-size:23px; padding:10px 40px; margin-top:10px; border:none; cursor:pointer; 
+    box-shadow:0 0 100px -24px #00FF7E;
+  }
+  @media(max-width:768px){
+    .offer s { font-size:27px; margin:0; }
+    .offer .por { font-size:20px; margin:-21px; }
+    .offer .price { font-size:91px; margin:-15px 0 0 0; }
+    .offer button { font-size:21px; margin:0 15px; }
+  }
 
-        .red-border-box {
-            border:5px dotted #FF0000; border-radius:15px; padding:30px; margin:30px 0;
-            transition: all 0.5s ease;
-        }
-        .red-border-box:hover { transform:scale(1.02); }
+  .questions { max-width:958px; margin:0 auto; background:#fff; padding:20px; text-align:center; }
+  .questions h3 { font-size:35px; font-weight:800; margin:20px 0 1px 0; line-height:1; }
+  .questions p { font-size:20px; font-weight:500; line-height:1.2; margin:10px 0; text-align:left; }
+  .questions ul { list-style:none; padding:0; margin:20px 0; text-align:left; }
+  .questions li { font-size:25px; font-weight:700; margin-bottom:15px; display:flex; align-items:center; color:#0E9600; }
+  .questions li i { margin-right:10px; font-size:33px; }
+  @media(max-width:768px){
+    .questions h3 { font-size:25px; }
+    .questions p { font-size:18px; }
+    .questions li { font-size:20px; }
+    .questions li i { font-size:21px; }
+  }
 
-        img { max-width:100%; height:auto; border-radius:26px; transition: transform 0.4s ease; }
-        img:hover { transform:scale(1.03); }
-
-        /* Depoimentos */
-        .testimonial-images { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:30px 0; }
-        .testimonial-images img { width:22%; border-radius:15px; transition: all 0.3s ease; }
-        .testimonial-images img:hover { transform:scale(1.05); }
-
-        /* Responsividade */
-        @media(max-width:768px){
-            .green-btn { font-size:18px; padding:12px 20px; }
-            h2 { font-size:28px; }
-            .red-text { font-size:25px; }
-            section { padding:40px 15px; }
-            .testimonial-images img { width:70%; margin:0 auto; }
-        }
-
-        /* Animação de fade-in ao scroll */
-        .fade-in { opacity:0; transform:translateY(40px); transition: all 0.8s ease-out; }
-        .fade-in.visible { opacity:1; transform:translateY(0); }
-
-        /* Background seções */
-        .section-black { background-color:#000; color:#fff; }
-        .section-gray { background-color:#f7f7f7; }
-
-    </style>
+  /* Divisores e seções adicionais podem ser adicionadas aqui conforme JSON */
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-    <!-- Resumo Inicial -->
-    <section class="center fade-in">
-        <p class="red-text" style="font-size:35px;font-weight:800;">Não leu tudo? Vou Resumir para Você...</p>
-        <p style="font-size:20px;font-weight:500;">
-            Se a ideia de criar, vender artes esportivas e chegar aos R$5mil por mês é uma meta boa para você…<br>
-            Eu realmente acredito que adquirir o <b>“DBDB”</b> <b>é uma decisão inteligente.</b><br>
-            <u>Não posso garantir que você vai alcançar esse resultado.</u><br>
-            Mas garanto que você terá acesso ao exato caminho que eu e meus alunos seguimos para alcançar essa primeira meta.
-        </p>
-    </section>
+<!-- Hero / Início -->
+<section class="hero">
+  <h1>A ESTRATÉGIA PARA FATURAR MAIS DE <span style="color:#2EF01F">R$5MIL POR MÊS</span> COM ARTES ESPORTIVAS</h1>
+  <h2>Você terá acesso imediato a estratégia de Design que eu utilizo para criar e vender artes esportivas.</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/XHOmBV4js_E" allowfullscreen></iframe>
+  </div>
+</section>
 
-    <!-- Proposta -->
-    <section class="red-border-box center fade-in">
-        <h2 style="font-size:20px;font-weight:500;"><u>A proposta é simples e clara</u>: Estou apresentando uma oportunidade de gerar renda expressiva como designer criando artes esportivas.</h2>
-    </section>
+<!-- Oferta -->
+<section class="offer" id="oferta">
+  <s>DE R$97,00</s>
+  <div class="por">POR APENAS</div>
+  <div class="price">R$10</div>
+  <button>COMPRAR AGORA!</button>
+</section>
 
-    <!-- Modelo e Benefícios -->
-    <section class="fade-in">
-        <p style="font-size:20px;font-weight:500;">
-            Estou falando de um modelo que você pode <u>simplesmente replicar</u> e criar quantas artes quiser e aumentar exponencialmente suas vendas.<br>
-            Estou falando de algo que servirá como o seu guia oficial para criar artes esportivas e que seja rentável no curto prazo.<br>
-            Felizmente, adquirindo seu acesso hoje você garante 85% de desconto e + 3 bônus exclusivos.<br>
-            <b>Pagamento único, sem pegadinhas e 7 dias de garantia.</b>
-        </p>
+<!-- Perguntas e Conteúdo -->
+<section class="questions">
+  <h3>Como criar backgrounds incriveis em poucos passos?</h3>
+  <h3>Como viver e ser lucrativo no design?</h3>
+  <h3>Como criar uma iluminação realista no Photoshop?</h3>
+  <h3>Como abordar e vender essas artes esportivas para jogadores?</h3>
 
-        <p class="red-text" style="font-size:35px;font-weight:800;">Legal... mas se é tão bom, por que está tão barato?</p>
+  <p>Essas são algumas das perguntas mais frequentes que eu recebo todos os dias no meu Instagram…</p>
+  <p>E se eu te falar que é possível usar minha estrutura e processo criativo para criar rapidamente artes incríveis capazes de te gerar mais de R$5mil todo mês?</p>
+  <p>E o melhor, <u>você não precisa</u> assistir infinitas horas de conteúdo, comprar cursos caros, nem torrar o seu dinheiro com testes e mais testes ATÉ conseguir vender.</p>
+  <p>Tudo o que você precisa fazer é <u>seguir</u> <u>estruturas validadas.</u></p>
+  <p>É claro que o sucesso de um designer envolve vários fatores: Sua experiência, sua dedicação, suas referências...</p>
+  <p>Mas sem dúvida nenhuma, dominar o processo criativo <b>é um dos mais importantes.</b></p>
+  <p>Mas deixa eu te fazer algumas perguntas…</p>
 
-        <img src="https://pivadesigner.com/wp-content/uploads/2023/04/desconfiado.jpg" alt="Desconfiado" class="fade-in">
+  <ul>
+    <li><i class="fas fa-bullseye"></i>O que você acha de aprender como criar e vender suas artes esportivas para jogadores do futebol brasileiro e mundial?</li>
+    <li><i class="fas fa-bullseye"></i>O que você acha de MODELAR os meus templates de artes esportivas?</li>
+    <li><i class="fas fa-bullseye"></i>E se você soubesse como é o meu processo criativo nos MÍNIMOS detalhes para usar as melhores técnicas que mais tem dado resultados pro meu bolso?</li>
+  </ul>
+</section>
 
-        <p style="font-size:20px;font-weight:500;">
-            Ahhh, eu sei que isso passou pela sua cabeça.<br>
-            Se você prestar atenção, o valor de R$10,00 e R$37,00 não parece ser um valor aleatório para cobrar em um produto (e de fato não é).<br>
-            <b>Razão número 01:</b> O valor não se torna um obstáculo para ninguém.<br>
-            <b>Razão número 02:</b> Proteção contra curiosos. Mesmo que o investimento seja baixo, o simples fato de cobrar já afasta curiosos em busca de “soluções gratuitas” na internet.<br>
-            E quem gosta do produto, fica com vontade comprar outros treinamentos no futuro (essa é a “jogada”).<br>
-            <u>Sem pegadinhas, sem letras miúdas ou nada do tipo.</u>
-        </p>
-    </section>
-
-    <!-- Acesso -->
-    <section class="fade-in">
-        <p class="red-text" style="font-size:35px;font-weight:800;">Em quanto tempo eu irei receber meu acesso?</p>
-        <p style="font-size:20px;font-weight:500;">
-            Logo após a aprovação do seu pagamento, <i><b>você irá receber no seu e-mail</b></i> de compra os seus dados de acesso.<br>
-            <u>O produto está em uma Área de Membros premium</u> para você ter uma experiência melhor com o produto.
-        </p>
-    </section>
-
-    <!-- Garantia -->
-    <section class="section-gray fade-in" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px;">
-        <div style="flex:1; min-width:250px; text-align:center;">
-            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/garantia-7-dias-1.png" alt="Garantia 7 dias">
-        </div>
-        <div style="flex:2; min-width:250px;">
-            <h2 class="red-text" style="font-size:33px;">VOCÊ NÃO TEM NADA A PERDER!</h2>
-            <p style="font-size:23px;">O PRODUTO TEM GARANTIA INCONDICIONAL DE 7 DIAS</p>
-            <p style="font-size:18px;">
-                Você pode assistir todas as aulas, ter acesso a todas estratégias que eu e meus alunos usamos.<br>
-                Se por <b>qualquer motivo</b> você não ficar satisfeito ou não se adaptar, basta entrar em contato com a minha equipe dentro do prazo de <b>7 dias e solicitar o reembolso</b> do valor investido.<br>
-                <b>Você receberá de volta cada centavo que pagou.</b><br>
-                Eu estou <b>tirando todo o risco das suas mãos</b> e colocando nas minhas.<br>
-                Faça sua inscrição agora mesmo e veja com seus próprios olhos.
-            </p>
-            <a href="#oferta" class="green-btn">OK, ME CONVENCEU!</a>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="section-black fade-in">
-        <h2 style="font-family:'Sora', sans-serif; font-size:32px; font-weight:900;">AINDA ESTÁ NA DÚVIDA? VEJA O QUE DIZEM...</h2>
-        <div class="testimonial-images">
-            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 1">
-            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 2">
-            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 3">
-            <img src="https://pivadesigner.com/wp-content/uploads/2023/01/Screenshot-2023-01-12-at-23.51.36.png" alt="Depoimento 4">
-        </div>
-        <a href="#oferta" class="green-btn">OK, ME CONVENCEU!</a>
-    </section>
-
-    <script>
-        // Script de animação fade-in ao scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-        faders.forEach(fader => { appearOnScroll.observe(fader); });
-    </script>
 </body>
 </html>
